@@ -33,7 +33,7 @@ var host = new HostBuilder()
     {
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();      
-        Configure.Services(services);
+        services.ConfigureWords();
     })
     .Build();
 

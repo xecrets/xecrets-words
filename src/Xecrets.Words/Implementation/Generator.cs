@@ -30,8 +30,13 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Implementation;
 
+/// <inheritdoc/>
+/// <param name="random">The <see cref="IRandom"/> random number generator to use.</param>
+/// <param name="culture">The <see cref="ICulture"/> culture to use.</param>
+/// <param name="validation">The <see cref="IValidation"/> validation to use.</param>
 public class Generator(IRandom random, ICulture culture, IValidation validation) : IGenerator
 {
+    /// <inheritdoc/>
     public string Generate(Trigrams trigrams, IEnumerable<Part> parts, Policy policy)
     {
         string result;
@@ -141,18 +146,8 @@ public class Generator(IRandom random, ICulture culture, IValidation validation)
 
         return value;
     }
-    /// <summary>
-    /// Generate a new word of a given length. As long as there's at least one valid word in the vocabulary of the given length,
-    /// it's guaranteed to generate something. Otherwise it may actually fail, but in practice it won't happen with a reasonable
-    /// vocabulary.
-    /// </summary>
-    /// <param name="length">The length of the word to generate</param>
-    /// <returns>A word of the given length</returns>
-    /// <exception cref="ArgumentOutOfRangeException">The length must be at least 3.</exception>
-    /// <exception cref="InvalidOperationException">No word was possible to generate of that length.</exception>
-    /// <remarks>
-    /// Word generation is done in a recursive fashion with backtracking if a dead end is hit.
-    /// </remarks>
+
+    /// <inheritdoc/>
     public string Word(Trigrams trigrams, int length)
     {
         if (length < 5)
@@ -229,7 +224,7 @@ public class Generator(IRandom random, ICulture culture, IValidation validation)
         return true;
     }
 
-    public string Digits(int length)
+    private string Digits(int length)
     {
         StringBuilder sb = new();
         for (int i = 0; i < length; ++i)
@@ -239,7 +234,7 @@ public class Generator(IRandom random, ICulture culture, IValidation validation)
         return sb.ToString();
     }
 
-    public string Special(int length, string special)
+    private string Special(int length, string special)
     {
         if (special.Length == 0)
         {

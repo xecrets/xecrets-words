@@ -50,6 +50,8 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Implementation;
 
+/// <inheritdoc/>
+/// <param name="random">An <see cref="IRandom"/> instance.</param>
 public class Builder(IRandom random) : IBuilder
 {
     private record Group(Part[] Parts, Strategy Strategy)
@@ -63,12 +65,15 @@ public class Builder(IRandom random) : IBuilder
 
     private readonly HashSet<Op> _foundOps = [];
 
+    /// <inheritdoc/>
     public IBuilder Add(Part[] parts, Strategy strategy)
     {
         _groups.Add(new(parts, strategy));
         return this;
     }
 
+    /// <inheritdoc/>
+    /// <exception cref="InvalidOperationException"></exception>
     public IEnumerable<Part> Build(Policy policy)
     {
         if (policy.Special.Length > 0)

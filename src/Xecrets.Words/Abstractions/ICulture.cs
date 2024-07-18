@@ -25,6 +25,9 @@ using System.Globalization;
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// Culture specific settings.
+/// </summary>
 public interface ICulture
 {
     /// <summary>

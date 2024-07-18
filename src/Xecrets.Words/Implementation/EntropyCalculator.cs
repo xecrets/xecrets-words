@@ -28,8 +28,10 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Implementation;
 
+/// <inheritdoc/>
 public class EntropyCalculator : IEntropyCalculator
 {
+    /// <inheritdoc/>
     public (double lo, double hi) Entropy(Trigrams trigrams, IEnumerable<Part> parts, Policy policy)
     {
         double lo = 0;
@@ -78,12 +80,7 @@ public class EntropyCalculator : IEntropyCalculator
         return (lo, hi);
     }
 
-    /// <summary>
-    /// Estimate the entropy of a given password.
-    /// </summary>
-    /// <param name="password"></param>
-    /// <param name="policy"></param>
-    /// <returns></returns>
+    /// <inheritdoc/>
     public double Entropy(Trigrams trigrams, string password, Policy policy)
     {
         double entropy = 0;
@@ -136,13 +133,7 @@ public class EntropyCalculator : IEntropyCalculator
         return wordEntropy + (additionalEntropy * extra);
     }
 
-    /// <summary>
-    /// Estimate reasonably quickly the entropy in bits of a word of a given length. It's not exact, but generally from ad hoc
-    /// testing it appears to consistently produce lower values than the exact calculation, which is what we want. A reasonable
-    /// estimate is that it's perhaps 0.5 bits lower than the exact value / character
-    /// </summary>
-    /// <param name="length">The number of characters to calculate for</param>
-    /// <returns>An estimated entropy in bits</returns>
+    /// <inheritdoc/>
     public double EstimateEntropy(Trigrams trigrams, int length)
     {
         double entropyBits = Math.Log2(trigrams.Strings.Starting.Length);
@@ -180,11 +171,7 @@ public class EntropyCalculator : IEntropyCalculator
         return distinctTails.Select(kvp => (kvp.Key, kvp.Value)).ToArray();
     }
 
-    /// <summary>
-    /// Typically only used for internal calibration, it's very slow
-    /// </summary>
-    /// <param name="length">Number of characters in word</param>
-    /// <returns>The entropy in bits of that length</returns>
+    /// <inheritdoc/>
     public double ExactEntropy(Trigrams trigrams, int length)
     {
         double entropyBits = Math.Log2(trigrams.Strings.Starting.Length);

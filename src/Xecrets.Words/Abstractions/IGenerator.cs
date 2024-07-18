@@ -25,9 +25,32 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// Generate passwords.
+/// </summary>
 public interface IGenerator
 {
+    /// <summary>
+    /// Generate a new word of a given length. As long as there's at least one valid word in the vocabulary of the given length,
+    /// it's guaranteed to generate something. Otherwise it may actually fail, but in practice it won't happen with a reasonable
+    /// vocabulary.
+    /// </summary>
+    /// <param name="trigrams">The <see cref="Trigrams"/> to use.</param>
+    /// <param name="length">The length of the word to generate</param>
+    /// <returns>A word of the given length</returns>
+    /// <exception cref="ArgumentOutOfRangeException">The length must be at least 3.</exception>
+    /// <exception cref="InvalidOperationException">No word was possible to generate of that length.</exception>
+    /// <remarks>
+    /// Word generation is done in a recursive fashion with backtracking if a dead end is hit.
+    /// </remarks>
     string Word(Trigrams trigrams, int length);
 
+    /// <summary>
+    /// Generate a password.
+    /// </summary>
+    /// <param name="trigrams">The <see cref="Trigrams"/> to use.</param>
+    /// <param name="parts">The <see cref="Part"/>s to use.</param>
+    /// <param name="policy">The <see cref="Policy"/> to use.</param>
+    /// <returns></returns>
     string Generate(Trigrams trigrams, IEnumerable<Part> parts, Policy policy);
 }

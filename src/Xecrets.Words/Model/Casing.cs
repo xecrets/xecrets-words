@@ -23,6 +23,9 @@
 
 namespace Xecrets.Words.Model;
 
+/// <summary>
+/// An enumeration of different casing tactics.
+/// </summary>
 public enum Casing
 {
     /// <summary>

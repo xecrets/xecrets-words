@@ -23,6 +23,9 @@
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// A random number generator
+/// </summary>
 public interface IRandom
 {
     /// <summary>
@@ -32,7 +35,7 @@ public interface IRandom
     /// <param name="max">The value returned is less than this</param>
     /// <param name="id">An arbitrary identifier, primarily used for unit testing, diagnostics and debugging.</param>
     /// <returns>
-    /// A value, such that min <= value < max, except for special cases:
+    /// A value, such that min LE value GT max, except for special cases:
     /// min == max returns min - 1
     /// min > max return max
     /// </returns>

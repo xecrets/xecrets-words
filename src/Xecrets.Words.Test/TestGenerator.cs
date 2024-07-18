@@ -46,7 +46,7 @@ public class TestGenerator
 
     private void RegisterServices()
     {
-        Configure.Services(_services);
+        _services.ConfigureWords();
 
         _services.Replace(ServiceDescriptor.Singleton<IRandom, FakeRandom>());
     }

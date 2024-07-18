@@ -23,8 +23,14 @@
 
 namespace Xecrets.Words.Model;
 
+/// <summary>
+/// An enumeration of typical password part operations.
+/// </summary>
 public enum Op
 {
+    /// <summary>
+    /// No operation, invalid value.
+    /// </summary>
     None,
 
     /// <summary>

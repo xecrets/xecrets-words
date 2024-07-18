@@ -25,13 +25,19 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// Validate a password against a policy and calculate the entropy of a password.
+/// </summary>
 public interface IValidation
 {
     /// <summary>
-    /// Validate a password against the policy.
+    /// Compare a given password against a policy. It's the callers responsibility to ensure that the generator
+    /// is configured so it's actually possibly to comply with the policy.
     /// </summary>
-    /// <param name="password"></param>
-    /// <returns></returns>
+    /// <param name="trigrams">The <see cref="Trigrams"/> to use.</param>
+    /// <param name="password">The password to validate against the policy.</param>
+    /// <param name="policy">The <see cref="Policy"/> to use.</param>
+    /// <returns>True if the password conforms to the policy, false otherwise.</returns>
     bool Validate(Trigrams trigrams, string password, Policy policy);
 
     /// <summary>
@@ -40,7 +46,8 @@ public interface IValidation
     /// The assumption is that if one instance of a character class, like lower case, is in
     /// the password, then all instances of that character class may be in the password.
     /// </summary>
-    /// <param name="password"></param>
+    /// <param name="password">The string to calculate the entropy of.</param>
+    /// <param name="policy">The <see cref="Policy"/> to use.</param>
     /// <returns>An upper bound estimate of the entropy in bits.</returns>
     /// <remarks>
     /// The password is filtered using a list of common passwords in various european contries,

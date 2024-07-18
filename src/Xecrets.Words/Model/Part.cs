@@ -23,4 +23,11 @@
 
 namespace Xecrets.Words.Model;
 
+/// <summary>
+/// A part of a password.
+/// </summary>
+/// <param name="Op">The <see cref="Op">operation</see> for this part.</param>
+/// <param name="Min">The minimum number of characters.</param>
+/// <param name="Max">The maximum number of characters.</param>
+/// <param name="Casing">The <see cref="Casing"/> to use, if relevant.</param>
 public record Part(Op Op, int Min, int Max, Casing Casing = Casing.Ignore);

@@ -27,9 +27,20 @@ using Xecrets.Words.Abstractions;
 
 namespace Xecrets.Words.Implementation;
 
+/// <summary>
+/// A default implementation of <see cref="ICulture"/>, using <see
+/// cref="CultureInfo.InvariantCulture"/> and <see cref="AsciiOnly"/> set to
+/// <c>true</c>.
+/// </summary>
 public class DefaultCulture : ICulture
 {
+    /// <summary>
+    /// The Invariant Culture.
+    /// </summary>
     public CultureInfo CultureInfo { get; init; } = CultureInfo.InvariantCulture;
 
+    /// <summary>
+    /// Use only ASCII characters.
+    /// </summary>
     public bool AsciiOnly { get; init; } = true;
 }

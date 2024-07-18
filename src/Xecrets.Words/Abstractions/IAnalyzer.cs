@@ -25,11 +25,31 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// Perform trigram analysis of text streams.
+/// </summary>
 public interface IAnalyzer
 {
+    /// <summary>
+    /// The <see cref="Vocabulary"/> of words found in the text stream,
+    /// including occurrence statistics.
+    /// </summary>
     Vocabulary Vocabulary { get; }
 
+    /// <summary>
+    /// Extract <see cref="Trigrams"/> from the vocabulary.
+    /// </summary>
+    /// <param name="asciiOnly">Set to true if only A-Z ASCII should be
+    /// included.</param>
+    /// <returns>The <see cref="Trigrams"/></returns>
     Trigrams Trigrams(bool asciiOnly);
 
+    /// <summary>
+    /// Add words from a text stream to the vocabulary.
+    /// </summary>
+    /// <param name="culture">An <see cref="ICulture"/> instance, primarily used
+    /// to ensure proper lower casing.</param>
+    /// <param name="reader">A <see cref="TextReader"/> to analyze.</param>
+    /// <returns>A waitable <see cref="Task"/>.</returns>
     Task AddAsync(ICulture culture, TextReader reader);
 }

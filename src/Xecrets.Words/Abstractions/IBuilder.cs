@@ -25,6 +25,10 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// Builds a password from a set of <see cref="Part"/>s and <see
+/// cref="Strategy"/> options.
+/// </summary>
 public interface IBuilder
 {
     /// <summary>
@@ -36,10 +40,12 @@ public interface IBuilder
     IBuilder Add(Part[] parts, Strategy strategy);
 
     /// <summary>
-    /// Generate the actual sequence of parts, according to the various strategies and
-    /// provided policy.
+    /// Produce the sequence of <see cref="Part"/>s according to the strategies
+    /// and policy.
     /// </summary>
-    /// <param name="policy"></param>
-    /// <returns>A sequence of parts to generate.</returns>
+    /// <param name="policy">The <see cref="Policy"/> for required types and
+    /// determine what constitutes special characters.</param>
+    /// <returns>A sequence of <see cref="Part"/>s that can be used to actually
+    /// generate the password.</returns>
     IEnumerable<Part> Build(Policy policy);
 }

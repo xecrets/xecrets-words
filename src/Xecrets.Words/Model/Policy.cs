@@ -23,9 +23,26 @@
 
 namespace Xecrets.Words.Model;
 
+/// <summary>
+/// A password policy.
+/// </summary>
+/// <param name="Length">The minimum length to meet the policy.</param>
+/// <param name="Entropy">The minimum entropy to meet the policy, or -1 if not
+/// part of the policy.</param>
+/// <param name="UpperLowerCase">Whether both upper and lower case characters
+/// are required.</param>
+/// <param name="Digits">Whether digits are required.</param>
+/// <param name="Special">A set of special characters of which at least one must
+/// be included, or an empty string.</param>
 public record Policy(int Length, int Entropy = -1, bool UpperLowerCase = true, bool Digits = true, string Special = "!@#$%&*+-_=;:'\",./?")
 {
+    /// <summary>
+    /// A default strong policy.
+    /// </summary>
     public static Policy Default { get; } = new Policy(16, 96);
 
+    /// <summary>
+    /// A simple policy for a word.
+    /// </summary>
     public static Policy SingleWord { get; } = new Policy(8, -1, UpperLowerCase: false, Digits: false, Special: string.Empty);
 }

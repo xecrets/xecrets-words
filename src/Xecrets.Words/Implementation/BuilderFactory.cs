@@ -25,8 +25,11 @@ using Xecrets.Words.Abstractions;
 
 namespace Xecrets.Words.Implementation;
 
+/// <inheritdoc/>
+/// <param name="random">The random number generator to use.</param>
 public class BuilderFactory(IRandom random) : IBuilderFactory
 {
+    /// <inheritdoc/>
     public IBuilder Create()
     {
         return new Builder(random);

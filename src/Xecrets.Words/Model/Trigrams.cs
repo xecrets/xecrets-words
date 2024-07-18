@@ -26,17 +26,33 @@ using Xecrets.Words.Internal;
 
 namespace Xecrets.Words.Model;
 
+/// <summary>
+/// Trigrams extracted from text by an analyzer.
+/// </summary>
 public class Trigrams
 {
+    /// <summary>
+    /// A set of precalculated estimates for entropy for different lengths of a
+    /// generated word.
+    /// </summary>
     [JsonPropertyName("length_entropy")]
     public Dictionary<int, double> LengthEntropy { get; set; } = [];
 
+    /// <summary>
+    /// All starting trigrams found, along with occurrence statistics.
+    /// </summary>
     [JsonPropertyName("starting")]
     public Dictionary<string, int> Starting { get; set; } = [];
 
+    /// <summary>
+    /// All middle trigrams found, along with occurrence statistics.
+    /// </summary>
     [JsonPropertyName("middle")]
     public Dictionary<string, int> Middle { get; set; } = [];
 
+    /// <summary>
+    /// All ending trigrams found, along with occurrence statistics.
+    /// </summary>
     [JsonPropertyName("ending")]
     public Dictionary<string, int> Ending { get; set; } = [];
 

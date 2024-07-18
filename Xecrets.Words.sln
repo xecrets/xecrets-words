@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		SECURITY.md = SECURITY.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xecrets.Words.RestApi", "src\Xecrets.Words.RestApi\Xecrets.Words.RestApi.csproj", "{17F4B951-27AF-4DE5-929D-07959FC4D716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words.RestApi", "src\Xecrets.Words.RestApi\Xecrets.Words.RestApi.csproj", "{17F4B951-27AF-4DE5-929D-07959FC4D716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

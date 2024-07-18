@@ -28,9 +28,12 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Implementation;
 
+/// <inheritdoc/>
 public class Serialization : ISerialization
 {
+    /// <inheritdoc/>
     public T Deserialize<T>(string json) where T : new() => JsonSerializer.Deserialize<T>(json) ?? new T();
 
+    /// <inheritdoc/>
     public string Serialize(Trigrams trigrams) => JsonSerializer.Serialize(trigrams, typeof(Trigrams), SourceGenerationContext.Default);
 }

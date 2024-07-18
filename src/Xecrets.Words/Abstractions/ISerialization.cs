@@ -25,9 +25,23 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// Serialize and deserialize trigrams.
+/// </summary>
 public interface ISerialization
 {
+    /// <summary>
+    /// Serialize trigrams to a JSON string.
+    /// </summary>
+    /// <param name="trigrams">The <see cref="Trigrams"/> to serialize.</param>
+    /// <returns>A string with JSON.</returns>
     string Serialize(Trigrams trigrams);
 
+    /// <summary>
+    /// Deserialize a JSON string to a type.
+    /// </summary>
+    /// <typeparam name="T">The type to deserialize to.</typeparam>
+    /// <param name="json">A string with JSON to deserialize.</param>
+    /// <returns>The deserialized object instance.</returns>
     T Deserialize<T>(string json) where T : new();
 }

@@ -28,13 +28,17 @@ using Xecrets.Words.Implementation;
 
 namespace Xecrets.Words;
 
+/// <summary>
+/// Extension methods to configure Xecrets Words services.
+/// </summary>
 public static class Configure
 {
     /// <summary>
     /// Configure default services for Xecrets Words
     /// </summary>
-    /// <param name="services"></param>
-    public static void Services(IServiceCollection services)
+    /// <param name="services">The <see cref="IServiceCollection"/> to add the
+    /// services to.</param>
+    public static void ConfigureWords(this IServiceCollection services)
     {
         services.AddSingleton<IRandom, StrongRandom>();
         services.AddSingleton<ICulture, DefaultCulture>();

@@ -31,6 +31,9 @@ namespace Xecrets.Words.Model;
 /// </summary>
 public class Vocabulary
 {
+    /// <summary>
+    /// All words found during analysis along with occurrence statistics.
+    /// </summary>
     [JsonPropertyName("vocabulary")]
     public Dictionary<string, int> Words = [];
 }

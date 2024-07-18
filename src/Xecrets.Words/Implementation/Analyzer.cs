@@ -31,12 +31,20 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words;
 
+/// <inheritdoc/>
+/// <param name="entropyCalculator">
+/// An instance of an <see cref="IEntropyCalculator"/> used to incluce
+/// pre-calculated entropy estimates for words of varying lengths.
+/// </param>
 public partial class Analyzer(IEntropyCalculator entropyCalculator) : IAnalyzer
 {
+    /// <inheritdoc/>
     public Vocabulary Vocabulary { get; } = new();
 
+    /// <inheritdoc/>
     public Trigrams Trigrams(bool asciiOnly) => Vocabulary.Trigrams(entropyCalculator, asciiOnly: asciiOnly);
 
+    /// <inheritdoc/>
     public async Task AddAsync(ICulture culture, TextReader reader)
     {
         BufferBlock<string> buffer = new BufferBlock<string>();

@@ -27,10 +27,12 @@ using Xecrets.Words.Abstractions;
 
 namespace Xecrets.Words.Implementation;
 
+/// <inheritdoc/>
 public class StrongRandom : IRandom
 {
     private readonly RandomNumberGenerator _random = RandomNumberGenerator.Create();
 
+    /// <inheritdoc/>
     public int Random(int min, int max, string id)
     {
         if (min < 0 || max < 0)

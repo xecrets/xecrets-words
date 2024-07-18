@@ -23,6 +23,9 @@
 
 namespace Xecrets.Words.Model;
 
+/// <summary>
+/// A set of strategies of how to select from a set of parts.
+/// </summary>
 public enum Strategy
 {
     /// <summary>

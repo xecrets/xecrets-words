@@ -30,8 +30,7 @@ using Xecrets.Words;
 using IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) =>
     {
-        Configure.Services(services);
-
+        services.ConfigureWords();
         services.AddTransient<Execute>();
     })
     .Build();

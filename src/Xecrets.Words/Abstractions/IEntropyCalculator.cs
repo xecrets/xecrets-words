@@ -25,13 +25,48 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// Various methods to calculate the entropy of a password.
+/// </summary>
 public interface IEntropyCalculator
 {
+    /// <summary>
+    /// Estimate the low and high entropy range for a given set of <see
+    /// cref="Part"/>s.
+    /// </summary>
+    /// <param name="trigrams">The <see cref="Trigrams"/> to use.</param>
+    /// <param name="parts">The <see cref="Part"/>s to use.</param>
+    /// <param name="policy">The <see cref="Policy"/> to use.</param>
+    /// <returns>A (lo, hi) tuple of entropy estimates.</returns>
+    /// <exception cref="ArgumentException"></exception>
     (double lo, double hi) Entropy(Trigrams trigrams, IEnumerable<Part> parts, Policy policy);
 
+    /// <summary>
+    /// Estimate the entropy of a given password.
+    /// </summary>
+    /// <param name="trigrams">The <see cref="Trigrams"/> to use.</param>
+    /// <param name="password">The password to calculate.</param>
+    /// <param name="policy">The <see cref="Policy"/> to use.</param>
+    /// <returns>An estimated policy.</returns>
     double Entropy(Trigrams trigrams, string password, Policy policy);
 
+    /// <summary>
+    /// Estimate reasonably quickly the entropy in bits of a word of a given
+    /// length. It's not exact, but generally from ad hoc testing it appears to
+    /// consistently produce lower values than the exact calculation, which is
+    /// what we want. A reasonable estimate is that it's perhaps 0.5 bits lower
+    /// than the exact value / character
+    /// </summary>
+    /// <param name="trigrams">The <see cref="Trigrams"/> to use.</param>
+    /// <param name="length">The number of characters to calculate for</param>
+    /// <returns>An estimated entropy in bits</returns>
     double EstimateEntropy(Trigrams trigrams, int length);
 
+    /// <summary>
+    /// Typically only used for internal calibration, it's probably very slow.
+    /// </summary>
+    /// <param name="trigrams">The <see cref="Trigrams"/> to use.</param>
+    /// <param name="length">Number of characters in word.</param>
+    /// <returns>The entropy in bits of that length</returns>
     double ExactEntropy(Trigrams trigrams, int length);
 }

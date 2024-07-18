@@ -29,14 +29,10 @@ using Xecrets.Words.Model;
 
 namespace Xecrets.Words.Implementation;
 
+/// <inheritdoc/>
 public class Validation(ICulture culture, IEntropyCalculator entropyCalculator) : IValidation
 {
-    /// <summary>
-    /// Compare a given password against a policy. It's the callers responsibility to ensure that the generator
-    /// is configured so it's actually possibly to comply with the policy.
-    /// </summary>
-    /// <param name="password">The password to validate against the policy.</param>
-    /// <returns>True if the password conforms to the policy, false otherwise.</returns>
+    /// <inheritdoc/>
     [SuppressMessage("Style", "IDE0046:Convert to conditional expression", Justification = "Readability")]
     public bool Validate(Trigrams trigrams, string password, Policy policy)
     {
@@ -85,6 +81,7 @@ public class Validation(ICulture culture, IEntropyCalculator entropyCalculator) 
             .Select(line => line.ToLower(culture.CultureInfo)).ToArray();
     }
 
+    /// <inheritdoc/>
     public int Entropy(string password, Policy policy)
     {
         string lowerCasePassword = password.ToLower(culture.CultureInfo);

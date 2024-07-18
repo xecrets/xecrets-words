@@ -23,7 +23,14 @@
 
 namespace Xecrets.Words.Abstractions;
 
+/// <summary>
+/// A factory to produce <see cref="IBuilder"/> instances.
+/// </summary>
 public interface IBuilderFactory
 {
+    /// <summary>
+    /// Create an <see cref="IBuilder"/> instance.
+    /// </summary>
+    /// <returns>A new instance.</returns>
     IBuilder Create();
 }
