@@ -1,4 +1,4 @@
-# README
+ï»¿# README
 
 Xecrets Words - a library and sample app to produce rememberable and
 pronounceable strong passwords C# for .NET 8+
@@ -49,9 +49,9 @@ AswaySmer
 1629 starting, 3246 middle and 1266 ending trigrams.
 Estimated entropy of an 8 character word is 26.
 10 sample Pascal cased passwords 8-10 characters:
-Fiemêlés
+FiemÃªlÃ©s
 [... Omitted for brevity]
-Lésasémi
+LÃ©sasÃ©mi
 
 [... Omitted for brevity]
 
@@ -61,8 +61,8 @@ Lésasémi
 Estimated entropy of an 8 character word is 27.
 10 sample Pascal cased passwords 8-10 characters:
 inorFunhus
-Nisgåelbo
-reundSnöl
+NisgÃ¥elbo
+reundSnÃ¶l
 [... Omitted for brevity]
 ```
 
