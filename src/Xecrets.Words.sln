@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words", "src\Xecrets.Words\Xecrets.Words.csproj", "{A755B055-6DB4-4E27-BBD3-13BDB1C7FD2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words", "Xecrets.Words\Xecrets.Words.csproj", "{A755B055-6DB4-4E27-BBD3-13BDB1C7FD2B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words.Test", "src\Xecrets.Words.Test\Xecrets.Words.Test.csproj", "{6B248732-8CC7-4CD0-B4BE-09CFA2A85B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words.Test", "Xecrets.Words.Test\Xecrets.Words.Test.csproj", "{6B248732-8CC7-4CD0-B4BE-09CFA2A85B77}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words.Cmd", "src\Xecrets.Words.Cmd\Xecrets.Words.Cmd.csproj", "{6E3606AA-9AC9-4685-857A-09222E1284CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words.Cmd", "Xecrets.Words.Cmd\Xecrets.Words.Cmd.csproj", "{6E3606AA-9AC9-4685-857A-09222E1284CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{58213750-5CA5-4BDE-8330-E50A00683D9B}"
 	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		LICENSE = LICENSE
-		README.md = README.md
-		SECURITY.md = SECURITY.md
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+		..\SECURITY.md = ..\SECURITY.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words.RestApi", "src\Xecrets.Words.RestApi\Xecrets.Words.RestApi.csproj", "{17F4B951-27AF-4DE5-929D-07959FC4D716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xecrets.Words.RestApi", "Xecrets.Words.RestApi\Xecrets.Words.RestApi.csproj", "{17F4B951-27AF-4DE5-929D-07959FC4D716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
