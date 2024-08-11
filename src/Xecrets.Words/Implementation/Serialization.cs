@@ -32,7 +32,7 @@ namespace Xecrets.Words.Implementation;
 public class Serialization : ISerialization
 {
     /// <inheritdoc/>
-    public T Deserialize<T>(string json) where T : new() => JsonSerializer.Deserialize<T>(json) ?? new T();
+    public T Deserialize<T>(string json) where T : new() => (T)(JsonSerializer.Deserialize(json, typeof(T), SourceGenerationContext.Default) ?? new T());
 
     /// <inheritdoc/>
     public string Serialize(Trigrams trigrams) => JsonSerializer.Serialize(trigrams, typeof(Trigrams), SourceGenerationContext.Default);

@@ -6,11 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <NeutralLanguage>en-US</NeutralLanguage>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Xecrets Words - Generate strong passwords possible to type and remember</Title>
+    <Title>Xecrets Words BETA GPL</Title>
     <Version>2.3.0</Version>
     <Authors>Axantum Software AB, Svante Seleborg</Authors>
     <Company>Axantum Software AB</Company>
-    <Description>Generate strong passwords possible to type and remember</Description>
+    <Description>Generate strong passwords easy to type and remember</Description>
     <Copyright>Copyright © 2024, Svante Seleborg, All Rights Reserved</Copyright>
     <PackageProjectUrl>https://www.axantum.com</PackageProjectUrl>
     <PackageTags>passwords;password generator;strong passwords</PackageTags>
@@ -30,11 +30,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningLevel>9999</WarningLevel>
+    <IsTrimmable>True</IsTrimmable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningLevel>9999</WarningLevel>
+    <IsTrimmable>True</IsTrimmable>
   </PropertyGroup>
 
   <ItemGroup>
