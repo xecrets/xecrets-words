@@ -29,7 +29,7 @@ using System.Resources;
 [assembly: InternalsVisibleTo("Xecrets.Words.Test")]
 [assembly: AssemblyMetadata("IsTrimmable", "True")]
 
-[assembly: AssemblyTitle("Xecrets Words BETA GPL")]
+[assembly: AssemblyTitle("Xecrets Words BETA GPL - main assembly")]
 [assembly: AssemblyDescription("Generate strong passwords easy to type and remember")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
