@@ -21,4 +21,31 @@
 
 #endregion Coypright and GPL License
 
-[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Xecrets.Words.Test")]
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Resources;
+
+[assembly: InternalsVisibleTo("Xecrets.Words.Test")]
+[assembly: AssemblyMetadata("IsTrimmable", "True")]
+
+[assembly: AssemblyTitle("Xecrets Words BETA GPL")]
+[assembly: AssemblyDescription("Generate strong passwords easy to type and remember")]
+#if DEBUG
+[assembly: AssemblyConfiguration("Debug")]
+#else
+[assembly: AssemblyConfiguration("Release")]
+#endif
+[assembly: AssemblyCompany("Axantum Software AB")]
+[assembly: AssemblyProduct("Xecrets Words")]
+[assembly: AssemblyCopyright("Copyright © 2024, Svante Seleborg, All Rights Reserved")]
+[assembly: AssemblyTrademark("Xecrets is a trademark of Axantum Software AB")]
+[assembly: AssemblyCulture("")]
+[assembly: AssemblyMetadata("RepositoryUrl", "https://github.com/xecrets/xecrets-words")]
+[assembly: NeutralResourcesLanguage("en-US")]
+
+[assembly: AssemblyVersion("2.3.0.0")]
+[assembly: AssemblyFileVersion("2.3.0.0")]
+
+[assembly: CLSCompliant(true)]
+[assembly: ComVisible(false)]

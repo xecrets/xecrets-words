@@ -31,12 +31,14 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningLevel>9999</WarningLevel>
     <IsTrimmable>True</IsTrimmable>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningLevel>9999</WarningLevel>
     <IsTrimmable>True</IsTrimmable>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
