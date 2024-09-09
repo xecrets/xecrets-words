@@ -87,13 +87,17 @@ public class Validation(ICulture culture, IEntropyCalculator entropyCalculator) 
         string lowerCasePassword = password.ToLower(culture.CultureInfo);
         foreach (string common in CommonPasswords)
         {
-            // Ordinal comparison is order of magnitudes faster...
-            int i = lowerCasePassword.IndexOf(common, StringComparison.Ordinal);
-            if (i >= 0)
+            int i;
+            do
             {
-                password = password.Remove(i, common.Length);
-                lowerCasePassword = lowerCasePassword.Remove(i, common.Length);
-            }
+                // Ordinal comparison is order of magnitudes faster...
+                i = lowerCasePassword.IndexOf(common, StringComparison.Ordinal);
+                if (i >= 0)
+                {
+                    password = password.Remove(i, common.Length);
+                    lowerCasePassword = lowerCasePassword.Remove(i, common.Length);
+                }
+            } while (i >= 0);
         }
 
         int charsetSize = 0;
