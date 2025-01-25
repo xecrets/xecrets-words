@@ -1,7 +1,7 @@
 ﻿#region Copyright and GPL License
 
 /*
- * Xecrets Words - Copyright © 2024, Svante Seleborg, All Rights Reserved.
+ * Xecrets Words - Copyright © 2024-2025 Svante Seleborg, All Rights Reserved.
  *
  * This code file is part of Xecrets Words, a library and sample app to produce rememberable and pronounceable strong passwords.
  * 
@@ -38,7 +38,7 @@ using System.Resources;
 #endif
 [assembly: AssemblyCompany("Axantum Software AB")]
 [assembly: AssemblyProduct("Xecrets Words")]
-[assembly: AssemblyCopyright("Copyright © 2024, Svante Seleborg, All Rights Reserved")]
+[assembly: AssemblyCopyright("Copyright © 2024-2025 Svante Seleborg, All Rights Reserved")]
 [assembly: AssemblyTrademark("Xecrets is a trademark of Axantum Software AB")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyMetadata("RepositoryUrl", "https://github.com/xecrets/xecrets-words")]

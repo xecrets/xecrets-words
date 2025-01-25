@@ -11,7 +11,7 @@
     <Authors>Axantum Software AB, Svante Seleborg</Authors>
     <Company>Axantum Software AB</Company>
     <Description>Generate strong passwords easy to type and remember</Description>
-    <Copyright>Copyright © 2024, Svante Seleborg, All Rights Reserved</Copyright>
+    <Copyright>Copyright © 2024-2025 Svante Seleborg, All Rights Reserved</Copyright>
     <PackageProjectUrl>https://www.axantum.com</PackageProjectUrl>
     <PackageTags>passwords;password generator;strong passwords</PackageTags>
     <AssemblyVersion>2.3.0.0</AssemblyVersion>
