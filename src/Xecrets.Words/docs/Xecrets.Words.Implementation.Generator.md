@@ -6,8 +6,7 @@
 Generate passwords.
 
 ```csharp
-public class Generator :
-Xecrets.Words.Abstractions.IGenerator
+public class Generator : Xecrets.Words.Abstractions.IGenerator
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Generator
@@ -53,8 +52,8 @@ Implements [Generate(Trigrams, IEnumerable&lt;Part&gt;, Policy)](Xecrets.Words.A
 
 ## Generator.Word(Trigrams, int) Method
 
-Generate a new word of a given length. As long as there's at least one valid word in the vocabulary of the given length,  
-it's guaranteed to generate something. Otherwise it may actually fail, but in practice it won't happen with a reasonable  
+Generate a new word of a given length. As long as there's at least one valid word in the vocabulary of the given length,
+it's guaranteed to generate something. Otherwise it may actually fail, but in practice it won't happen with a reasonable
 vocabulary.
 
 ```csharp

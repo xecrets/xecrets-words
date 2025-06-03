@@ -6,8 +6,7 @@
 A factory to produce [IBuilder](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IBuilder 'Xecrets.Words.Abstractions.IBuilder') instances.
 
 ```csharp
-public class BuilderFactory :
-Xecrets.Words.Abstractions.IBuilderFactory
+public class BuilderFactory : Xecrets.Words.Abstractions.IBuilderFactory
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; BuilderFactory

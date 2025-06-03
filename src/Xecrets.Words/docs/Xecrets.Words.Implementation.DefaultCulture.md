@@ -3,12 +3,11 @@
 
 ## DefaultCulture Class
 
-A default implementation of [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture'), using [System.Globalization.CultureInfo.InvariantCulture](https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CultureInfo.InvariantCulture 'System.Globalization.CultureInfo.InvariantCulture') and [AsciiOnly](Xecrets.Words.Implementation.DefaultCulture.md#Xecrets.Words.Implementation.DefaultCulture.AsciiOnly 'Xecrets.Words.Implementation.DefaultCulture.AsciiOnly') set to  
+A default implementation of [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture'), using [System.Globalization.CultureInfo.InvariantCulture](https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CultureInfo.InvariantCulture 'System.Globalization.CultureInfo.InvariantCulture') and [AsciiOnly](Xecrets.Words.Implementation.DefaultCulture.md#Xecrets.Words.Implementation.DefaultCulture.AsciiOnly 'Xecrets.Words.Implementation.DefaultCulture.AsciiOnly') set to
 `true`.
 
 ```csharp
-public class DefaultCulture :
-Xecrets.Words.Abstractions.ICulture
+public class DefaultCulture : Xecrets.Words.Abstractions.ICulture
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; DefaultCulture
@@ -23,7 +22,7 @@ Implements [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.I
 Use only ASCII characters.
 
 ```csharp
-public bool AsciiOnly { get; set; }
+public bool AsciiOnly { get; init; }
 ```
 
 Implements [AsciiOnly](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture.AsciiOnly 'Xecrets.Words.Abstractions.ICulture.AsciiOnly')
@@ -38,7 +37,7 @@ Implements [AsciiOnly](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.
 The Invariant Culture.
 
 ```csharp
-public System.Globalization.CultureInfo CultureInfo { get; set; }
+public System.Globalization.CultureInfo CultureInfo { get; init; }
 ```
 
 Implements [CultureInfo](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture.CultureInfo 'Xecrets.Words.Abstractions.ICulture.CultureInfo')

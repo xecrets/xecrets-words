@@ -21,7 +21,7 @@ Derived
 
 ## IAnalyzer.Vocabulary Property
 
-The [Vocabulary](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IAnalyzer.Vocabulary 'Xecrets.Words.Abstractions.IAnalyzer.Vocabulary') of words found in the text stream,  
+The [Vocabulary](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IAnalyzer.Vocabulary 'Xecrets.Words.Abstractions.IAnalyzer.Vocabulary') of words found in the text stream,
 including occurrence statistics.
 
 ```csharp
@@ -47,7 +47,7 @@ System.Threading.Tasks.Task AddAsync(Xecrets.Words.Abstractions.ICulture culture
 
 `culture` [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture')
 
-An [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture') instance, primarily used  
+An [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture') instance, primarily used
             to ensure proper lower casing.
 
 <a name='Xecrets.Words.Abstractions.IAnalyzer.AddAsync(Xecrets.Words.Abstractions.ICulture,System.IO.TextReader).reader'></a>
@@ -75,7 +75,7 @@ Xecrets.Words.Model.Trigrams Trigrams(bool asciiOnly);
 
 `asciiOnly` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
-Set to true if only A-Z ASCII should be  
+Set to true if only A-Z ASCII should be
             included.
 
 #### Returns
@@ -86,7 +86,7 @@ The [Trigrams(bool)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IA
 
 ## IBuilder Interface
 
-Builds a password from a set of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s and [Strategy](Xecrets.Words.Model.md#Xecrets.Words.Model.Strategy 'Xecrets.Words.Model.Strategy') options.
+Builds a password from a set of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s and [Strategy](Xecrets.Words.Model.Strategy.md 'Xecrets.Words.Model.Strategy') options.
 
 ```csharp
 public interface IBuilder
@@ -113,7 +113,7 @@ Xecrets.Words.Abstractions.IBuilder Add(Xecrets.Words.Model.Part[] parts, Xecret
 
 <a name='Xecrets.Words.Abstractions.IBuilder.Add(Xecrets.Words.Model.Part[],Xecrets.Words.Model.Strategy).strategy'></a>
 
-`strategy` [Strategy](Xecrets.Words.Model.md#Xecrets.Words.Model.Strategy 'Xecrets.Words.Model.Strategy')
+`strategy` [Strategy](Xecrets.Words.Model.Strategy.md 'Xecrets.Words.Model.Strategy')
 
 #### Returns
 [IBuilder](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IBuilder 'Xecrets.Words.Abstractions.IBuilder')  
@@ -123,7 +123,7 @@ A reference to the builder.
 
 ## IBuilder.Build(Policy) Method
 
-Produce the sequence of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s according to the strategies  
+Produce the sequence of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s according to the strategies
 and policy.
 
 ```csharp
@@ -135,12 +135,12 @@ System.Collections.Generic.IEnumerable<Xecrets.Words.Model.Part> Build(Xecrets.W
 
 `policy` [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy')
 
-The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') for required types and  
+The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') for required types and
             determine what constitutes special characters.
 
 #### Returns
 [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')  
-A sequence of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s that can be used to actually  
+A sequence of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s that can be used to actually
             generate the password.
 
 <a name='Xecrets.Words.Abstractions.IBuilderFactory'></a>
@@ -299,10 +299,10 @@ A (lo, hi) tuple of entropy estimates.
 
 ## IEntropyCalculator.EstimateEntropy(Trigrams, int) Method
 
-Estimate reasonably quickly the entropy in bits of a word of a given  
-length. It's not exact, but generally from ad hoc testing it appears to  
-consistently produce lower values than the exact calculation, which is  
-what we want. A reasonable estimate is that it's perhaps 0.5 bits lower  
+Estimate reasonably quickly the entropy in bits of a word of a given
+length. It's not exact, but generally from ad hoc testing it appears to
+consistently produce lower values than the exact calculation, which is
+what we want. A reasonable estimate is that it's perhaps 0.5 bits lower
 than the exact value / character
 
 ```csharp
@@ -403,8 +403,8 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 
 ## IGenerator.Word(Trigrams, int) Method
 
-Generate a new word of a given length. As long as there's at least one valid word in the vocabulary of the given length,  
-it's guaranteed to generate something. Otherwise it may actually fail, but in practice it won't happen with a reasonable  
+Generate a new word of a given length. As long as there's at least one valid word in the vocabulary of the given length,
+it's guaranteed to generate something. Otherwise it may actually fail, but in practice it won't happen with a reasonable
 vocabulary.
 
 ```csharp
@@ -484,8 +484,8 @@ An arbitrary identifier, primarily used for unit testing, diagnostics and debugg
 
 #### Returns
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
-A value, such that min LE value GT max, except for special cases:  
-min == max returns min - 1  
+A value, such that min LE value GT max, except for special cases:
+min == max returns min - 1
 min > max return max
 
 <a name='Xecrets.Words.Abstractions.ISerialization'></a>
@@ -570,9 +570,9 @@ Derived
 
 ## IValidation.Entropy(string, Policy) Method
 
-Calculate the bit strength of a password, only based on the password itself, not  
-taking into account any other factors like how it is generated or with what policy.  
-The assumption is that if one instance of a character class, like lower case, is in  
+Calculate the bit strength of a password, only based on the password itself, not
+taking into account any other factors like how it is generated or with what policy.
+The assumption is that if one instance of a character class, like lower case, is in
 the password, then all instances of that character class may be in the password.
 
 ```csharp
@@ -597,19 +597,19 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 An upper bound estimate of the entropy in bits.
 
 ### Remarks
-The password is filtered using a list of common passwords in various european contries,  
-compiled from https://www.kaggle.com/datasets/prasertk/top-200-passwords-by-country-2021  
-which in turn is based on https://nordpass.com/most-common-passwords-list/ . If part of  
-the provided password is found in this list, that part is removed from the password before  
-calculating, thus effectively treating such a part as adding 0 bits of entropy.  
-The estimate should be considered a maximum value under optimal conditions, it is probably  
+The password is filtered using a list of common passwords in various european contries,
+compiled from https://www.kaggle.com/datasets/prasertk/top-200-passwords-by-country-2021
+which in turn is based on https://nordpass.com/most-common-passwords-list/ . If part of
+the provided password is found in this list, that part is removed from the password before
+calculating, thus effectively treating such a part as adding 0 bits of entropy.
+The estimate should be considered a maximum value under optimal conditions, it is probably
 lower if the attacker knows or guesses any part of the policy used to generate the password.
 
 <a name='Xecrets.Words.Abstractions.IValidation.Validate(Xecrets.Words.Model.Trigrams,string,Xecrets.Words.Model.Policy)'></a>
 
 ## IValidation.Validate(Trigrams, string, Policy) Method
 
-Compare a given password against a policy. It's the callers responsibility to ensure that the generator  
+Compare a given password against a policy. It's the callers responsibility to ensure that the generator
 is configured so it's actually possibly to comply with the policy.
 
 ```csharp

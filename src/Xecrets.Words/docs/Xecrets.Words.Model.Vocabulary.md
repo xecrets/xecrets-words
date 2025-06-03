@@ -3,7 +3,7 @@
 
 ## Vocabulary Class
 
-The parsed vocabulary of words after analyzation of text, along with  
+The parsed vocabulary of words after analyzation of text, along with
 occurrence statistics in a dictionary.
 
 ```csharp

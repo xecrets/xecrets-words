@@ -29,7 +29,7 @@ public System.Collections.Generic.Dictionary<string,int> Ending { get; set; }
 
 ## Trigrams.LengthEntropy Property
 
-A set of precalculated estimates for entropy for different lengths of a  
+A set of precalculated estimates for entropy for different lengths of a
 generated word.
 
 ```csharp

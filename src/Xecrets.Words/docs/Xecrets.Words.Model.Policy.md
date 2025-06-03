@@ -6,8 +6,7 @@
 A password policy.
 
 ```csharp
-public class Policy :
-System.IEquatable<Xecrets.Words.Model.Policy>
+public record Policy : System.IEquatable<Xecrets.Words.Model.Policy>
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Policy
@@ -36,14 +35,14 @@ The minimum length to meet the policy.
 
 `Entropy` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The minimum entropy to meet the policy, or -1 if not  
+The minimum entropy to meet the policy, or -1 if not
             part of the policy.
 
 <a name='Xecrets.Words.Model.Policy.Policy(int,int,bool,bool,string).UpperLowerCase'></a>
 
 `UpperLowerCase` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
-Whether both upper and lower case characters  
+Whether both upper and lower case characters
             are required.
 
 <a name='Xecrets.Words.Model.Policy.Policy(int,int,bool,bool,string).Digits'></a>
@@ -56,7 +55,7 @@ Whether digits are required.
 
 `Special` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
-A set of special characters of which at least one must  
+A set of special characters of which at least one must
             be included, or an empty string.
 ### Properties
 
@@ -80,7 +79,7 @@ public static Xecrets.Words.Model.Policy Default { get; }
 Whether digits are required.
 
 ```csharp
-public bool Digits { get; set; }
+public bool Digits { get; init; }
 ```
 
 #### Property Value
@@ -90,11 +89,11 @@ public bool Digits { get; set; }
 
 ## Policy.Entropy Property
 
-The minimum entropy to meet the policy, or -1 if not  
+The minimum entropy to meet the policy, or -1 if not
             part of the policy.
 
 ```csharp
-public int Entropy { get; set; }
+public int Entropy { get; init; }
 ```
 
 #### Property Value
@@ -107,7 +106,7 @@ public int Entropy { get; set; }
 The minimum length to meet the policy.
 
 ```csharp
-public int Length { get; set; }
+public int Length { get; init; }
 ```
 
 #### Property Value
@@ -130,11 +129,11 @@ public static Xecrets.Words.Model.Policy SingleWord { get; }
 
 ## Policy.Special Property
 
-A set of special characters of which at least one must  
+A set of special characters of which at least one must
             be included, or an empty string.
 
 ```csharp
-public string Special { get; set; }
+public string Special { get; init; }
 ```
 
 #### Property Value
@@ -144,11 +143,11 @@ public string Special { get; set; }
 
 ## Policy.UpperLowerCase Property
 
-Whether both upper and lower case characters  
+Whether both upper and lower case characters
             are required.
 
 ```csharp
-public bool UpperLowerCase { get; set; }
+public bool UpperLowerCase { get; init; }
 ```
 
 #### Property Value

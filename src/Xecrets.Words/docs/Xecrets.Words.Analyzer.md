@@ -6,8 +6,7 @@
 Perform trigram analysis of text streams.
 
 ```csharp
-public class Analyzer :
-Xecrets.Words.Abstractions.IAnalyzer
+public class Analyzer : Xecrets.Words.Abstractions.IAnalyzer
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Analyzer
@@ -19,7 +18,7 @@ Implements [IAnalyzer](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.
 
 ## Analyzer.Vocabulary Property
 
-The [Vocabulary](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IAnalyzer.Vocabulary 'Xecrets.Words.Abstractions.IAnalyzer.Vocabulary') of words found in the text stream,  
+The [Vocabulary](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IAnalyzer.Vocabulary 'Xecrets.Words.Abstractions.IAnalyzer.Vocabulary') of words found in the text stream,
 including occurrence statistics.
 
 ```csharp
@@ -47,7 +46,7 @@ public System.Threading.Tasks.Task AddAsync(Xecrets.Words.Abstractions.ICulture 
 
 `culture` [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture')
 
-An [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture') instance, primarily used  
+An [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture') instance, primarily used
             to ensure proper lower casing.
 
 <a name='Xecrets.Words.Analyzer.AddAsync(Xecrets.Words.Abstractions.ICulture,System.IO.TextReader).reader'></a>
@@ -77,7 +76,7 @@ public Xecrets.Words.Model.Trigrams Trigrams(bool asciiOnly);
 
 `asciiOnly` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
-Set to true if only A-Z ASCII should be  
+Set to true if only A-Z ASCII should be
             included.
 
 Implements [Trigrams(bool)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IAnalyzer.Trigrams(bool) 'Xecrets.Words.Abstractions.IAnalyzer.Trigrams(bool)')

@@ -6,8 +6,7 @@
 A random number generator
 
 ```csharp
-public class StrongRandom :
-Xecrets.Words.Abstractions.IRandom
+public class StrongRandom : Xecrets.Words.Abstractions.IRandom
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; StrongRandom
@@ -48,6 +47,6 @@ Implements [Random(int, int, string)](Xecrets.Words.Abstractions.md#Xecrets.Word
 
 #### Returns
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
-A value, such that min LE value GT max, except for special cases:  
-min == max returns min - 1  
+A value, such that min LE value GT max, except for special cases:
+min == max returns min - 1
 min > max return max

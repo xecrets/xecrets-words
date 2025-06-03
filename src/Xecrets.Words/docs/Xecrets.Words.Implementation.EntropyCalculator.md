@@ -6,8 +6,7 @@
 Various methods to calculate the entropy of a password.
 
 ```csharp
-public class EntropyCalculator :
-Xecrets.Words.Abstractions.IEntropyCalculator
+public class EntropyCalculator : Xecrets.Words.Abstractions.IEntropyCalculator
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; EntropyCalculator
@@ -93,10 +92,10 @@ A (lo, hi) tuple of entropy estimates.
 
 ## EntropyCalculator.EstimateEntropy(Trigrams, int) Method
 
-Estimate reasonably quickly the entropy in bits of a word of a given  
-length. It's not exact, but generally from ad hoc testing it appears to  
-consistently produce lower values than the exact calculation, which is  
-what we want. A reasonable estimate is that it's perhaps 0.5 bits lower  
+Estimate reasonably quickly the entropy in bits of a word of a given
+length. It's not exact, but generally from ad hoc testing it appears to
+consistently produce lower values than the exact calculation, which is
+what we want. A reasonable estimate is that it's perhaps 0.5 bits lower
 than the exact value / character
 
 ```csharp

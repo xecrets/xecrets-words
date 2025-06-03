@@ -6,8 +6,7 @@
 A part of a password.
 
 ```csharp
-public class Part :
-System.IEquatable<Xecrets.Words.Model.Part>
+public record Part : System.IEquatable<Xecrets.Words.Model.Part>
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Part
@@ -28,7 +27,7 @@ public Part(Xecrets.Words.Model.Op Op, int Min, int Max, Xecrets.Words.Model.Cas
 
 <a name='Xecrets.Words.Model.Part.Part(Xecrets.Words.Model.Op,int,int,Xecrets.Words.Model.Casing).Op'></a>
 
-`Op` [Op](Xecrets.Words.Model.md#Xecrets.Words.Model.Op 'Xecrets.Words.Model.Op')
+`Op` [Op](Xecrets.Words.Model.Op.md 'Xecrets.Words.Model.Op')
 
 The [operation](Xecrets.Words.Model.Part.md#Xecrets.Words.Model.Part.Op 'Xecrets.Words.Model.Part.Op') for this part.
 
@@ -46,7 +45,7 @@ The maximum number of characters.
 
 <a name='Xecrets.Words.Model.Part.Part(Xecrets.Words.Model.Op,int,int,Xecrets.Words.Model.Casing).Casing'></a>
 
-`Casing` [Casing](Xecrets.Words.Model.md#Xecrets.Words.Model.Casing 'Xecrets.Words.Model.Casing')
+`Casing` [Casing](Xecrets.Words.Model.Casing.md 'Xecrets.Words.Model.Casing')
 
 The [Casing](Xecrets.Words.Model.Part.md#Xecrets.Words.Model.Part.Casing 'Xecrets.Words.Model.Part.Casing') to use, if relevant.
 ### Properties
@@ -58,11 +57,11 @@ The [Casing](Xecrets.Words.Model.Part.md#Xecrets.Words.Model.Part.Casing 'Xecret
 The [Casing](Xecrets.Words.Model.Part.md#Xecrets.Words.Model.Part.Casing 'Xecrets.Words.Model.Part.Casing') to use, if relevant.
 
 ```csharp
-public Xecrets.Words.Model.Casing Casing { get; set; }
+public Xecrets.Words.Model.Casing Casing { get; init; }
 ```
 
 #### Property Value
-[Casing](Xecrets.Words.Model.md#Xecrets.Words.Model.Casing 'Xecrets.Words.Model.Casing')
+[Casing](Xecrets.Words.Model.Casing.md 'Xecrets.Words.Model.Casing')
 
 <a name='Xecrets.Words.Model.Part.Max'></a>
 
@@ -71,7 +70,7 @@ public Xecrets.Words.Model.Casing Casing { get; set; }
 The maximum number of characters.
 
 ```csharp
-public int Max { get; set; }
+public int Max { get; init; }
 ```
 
 #### Property Value
@@ -84,7 +83,7 @@ public int Max { get; set; }
 The minimum number of characters.
 
 ```csharp
-public int Min { get; set; }
+public int Min { get; init; }
 ```
 
 #### Property Value
@@ -97,8 +96,8 @@ public int Min { get; set; }
 The [operation](Xecrets.Words.Model.Part.md#Xecrets.Words.Model.Part.Op 'Xecrets.Words.Model.Part.Op') for this part.
 
 ```csharp
-public Xecrets.Words.Model.Op Op { get; set; }
+public Xecrets.Words.Model.Op Op { get; init; }
 ```
 
 #### Property Value
-[Op](Xecrets.Words.Model.md#Xecrets.Words.Model.Op 'Xecrets.Words.Model.Op')
+[Op](Xecrets.Words.Model.Op.md 'Xecrets.Words.Model.Op')
