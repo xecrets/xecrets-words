@@ -21,14 +21,11 @@
 
 #endregion Coypright and GPL License
 
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Text;
+using System.Net;
 
 using Xecrets.Words.Abstractions;
 using Xecrets.Words.Model;
@@ -45,8 +42,7 @@ public class WordApi(ILogger<WordApi> logger, ISerialization serialization, IGen
     private readonly ILogger _logger = logger;
 
     [Function("strong")]
-    [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "It just has to be there...")]
-    public IActionResult Strong([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest httpRequest)
+    public async Task<HttpResponseData> Strong([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData httpRequest)
     {
         IBuilder builder = builderFactory.Create()
             .Add([new(Op.Special, 1, 1), new(Op.Digit, 1, 2)], Strategy.ZeroOrOne)
@@ -56,13 +52,12 @@ public class WordApi(ILogger<WordApi> logger, ISerialization serialization, IGen
             .Add([new(Op.Special, 1, 1), new(Op.Digit, 1, 2)], Strategy.IfRequired);
         Policy policy = Policy.Default with { Length = 18, Entropy = 75, };
 
-        return Generate(policy, builder, "strong");
+        return await Generate(httpRequest, policy, builder, "strong");
 
     }
 
     [Function("weak")]
-    [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "It just has to be there...")]
-    public IActionResult Weak([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest httpRequest)
+    public async Task<HttpResponseData> Weak([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData httpRequest)
     {
         IBuilder builder = builderFactory.Create()
             .Add([new(Op.Special, 1, 1), new(Op.Digit, 1, 2)], Strategy.ZeroOrOne)
@@ -70,21 +65,20 @@ public class WordApi(ILogger<WordApi> logger, ISerialization serialization, IGen
             .Add([new(Op.Special, 1, 1), new(Op.Digit, 1, 2)], Strategy.IfRequired);
         Policy policy = Policy.Default with { Length = 10, Entropy = 35, };
 
-        return Generate(policy, builder, "weak");
+        return await Generate(httpRequest, policy, builder, "weak");
     }
 
     [Function("word")]
-    [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "It just has to be there...")]
-    public IActionResult Word([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest httpRequest)
+    public async Task<HttpResponseData> Word([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData httpRequest)
     {
         IBuilder builder = builderFactory.Create()
             .Add([new(Op.Word, 8, 10, Casing.TitleOrCamel)], Strategy.All);
         Policy policy = Policy.Default with { Length = 8, Entropy = -1, Digits = false, Special = string.Empty, UpperLowerCase = true };
 
-        return Generate(policy, builder, "weak");
+        return await Generate(httpRequest, policy, builder, "weak");
     }
 
-    private JsonResult Generate(Policy policy, IBuilder builder, string level)
+    private async Task<HttpResponseData> Generate(HttpRequestData httpRequest, Policy policy, IBuilder builder, string level)
     {
         IEnumerable<Part> parts = builder.Build(policy);
         string pw = generator.Generate(Trigrams, parts, policy);
@@ -93,6 +87,8 @@ public class WordApi(ILogger<WordApi> logger, ISerialization serialization, IGen
 
         _logger.LogInformation("Generated a {level} password.", level);
 
-        return new JsonResult(new { pw, lo, ge, hi, });
+        var response = httpRequest.CreateResponse(HttpStatusCode.OK);
+        await response.WriteAsJsonAsync(new { pw, lo, ge, hi });
+        return response;
     }
 }

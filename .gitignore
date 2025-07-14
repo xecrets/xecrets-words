@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/src/Xecrets.Words.RestApi/Properties/ServiceDependencies/XecretsWordsRestApi - Zip Deploy/storage1.arm.json
+/src/Xecrets.Words.RestApi/Properties/serviceDependencies.XecretsWordsRestApi - Zip Deploy.json
+/src/Xecrets.Words.RestApi/Properties/serviceDependencies.json
