@@ -9,7 +9,7 @@ A factory to produce [IBuilder](Xecrets.Words.Abstractions.md#Xecrets.Words.Abst
 public class BuilderFactory : Xecrets.Words.Abstractions.IBuilderFactory
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; BuilderFactory
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; BuilderFactory
 
 Implements [IBuilderFactory](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IBuilderFactory 'Xecrets.Words.Abstractions.IBuilderFactory')
 ### Methods

@@ -9,7 +9,7 @@ Builds a password from a set of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Word
 public class Builder : Xecrets.Words.Abstractions.IBuilder
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Builder
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Builder
 
 Implements [IBuilder](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IBuilder 'Xecrets.Words.Abstractions.IBuilder')
 ### Methods
@@ -27,7 +27,7 @@ public Xecrets.Words.Abstractions.IBuilder Add(Xecrets.Words.Model.Part[] parts,
 
 <a name='Xecrets.Words.Implementation.Builder.Add(Xecrets.Words.Model.Part[],Xecrets.Words.Model.Strategy).parts'></a>
 
-`parts` [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`parts` [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[[]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System.Array')
 
 <a name='Xecrets.Words.Implementation.Builder.Add(Xecrets.Words.Model.Part[],Xecrets.Words.Model.Strategy).strategy'></a>
 
@@ -61,6 +61,6 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') for req
 Implements [Build(Policy)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IBuilder.Build(Xecrets.Words.Model.Policy) 'Xecrets.Words.Abstractions.IBuilder.Build(Xecrets.Words.Model.Policy)')
 
 #### Returns
-[System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')  
+[System.Collections.Generic.IEnumerable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')  
 A sequence of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s that can be used to actually
             generate the password.

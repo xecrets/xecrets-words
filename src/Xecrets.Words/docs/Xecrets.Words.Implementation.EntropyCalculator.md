@@ -9,7 +9,7 @@ Various methods to calculate the entropy of a password.
 public class EntropyCalculator : Xecrets.Words.Abstractions.IEntropyCalculator
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; EntropyCalculator
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; EntropyCalculator
 
 Implements [IEntropyCalculator](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IEntropyCalculator 'Xecrets.Words.Abstractions.IEntropyCalculator')
 ### Methods
@@ -33,7 +33,7 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Implementation.EntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,string,Xecrets.Words.Model.Policy).password'></a>
 
-`password` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`password` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 The password to calculate.
 
@@ -46,7 +46,7 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 Implements [Entropy(Trigrams, string, Policy)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IEntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,string,Xecrets.Words.Model.Policy) 'Xecrets.Words.Abstractions.IEntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams, string, Xecrets.Words.Model.Policy)')
 
 #### Returns
-[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')  
+[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')  
 An estimated policy.
 
 <a name='Xecrets.Words.Implementation.EntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy)'></a>
@@ -68,7 +68,7 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Implementation.EntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy).parts'></a>
 
-`parts` [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')
+`parts` [System.Collections.Generic.IEnumerable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')
 
 The [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s to use.
 
@@ -81,12 +81,12 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 Implements [Entropy(Trigrams, IEnumerable&lt;Part&gt;, Policy)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IEntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy) 'Xecrets.Words.Abstractions.IEntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams, System.Collections.Generic.IEnumerable<Xecrets.Words.Model.Part>, Xecrets.Words.Model.Policy)')
 
 #### Returns
-[&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple 'System.ValueTuple')[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')[,](https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple 'System.ValueTuple')[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple 'System.ValueTuple')  
+[&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple 'System.ValueTuple')[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')[,](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple 'System.ValueTuple')[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple 'System.ValueTuple')  
 A (lo, hi) tuple of entropy estimates.
 
 #### Exceptions
 
-[System.ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/System.ArgumentException 'System.ArgumentException')
+[System.ArgumentException](https://learn.microsoft.com/en-us/dotnet/api/system.argumentexception 'System.ArgumentException')
 
 <a name='Xecrets.Words.Implementation.EntropyCalculator.EstimateEntropy(Xecrets.Words.Model.Trigrams,int)'></a>
 
@@ -111,14 +111,14 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Implementation.EntropyCalculator.EstimateEntropy(Xecrets.Words.Model.Trigrams,int).length'></a>
 
-`length` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`length` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 The number of characters to calculate for
 
 Implements [EstimateEntropy(Trigrams, int)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IEntropyCalculator.EstimateEntropy(Xecrets.Words.Model.Trigrams,int) 'Xecrets.Words.Abstractions.IEntropyCalculator.EstimateEntropy(Xecrets.Words.Model.Trigrams, int)')
 
 #### Returns
-[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')  
+[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')  
 An estimated entropy in bits
 
 <a name='Xecrets.Words.Implementation.EntropyCalculator.ExactEntropy(Xecrets.Words.Model.Trigrams,int)'></a>
@@ -140,12 +140,12 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Implementation.EntropyCalculator.ExactEntropy(Xecrets.Words.Model.Trigrams,int).length'></a>
 
-`length` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`length` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 Number of characters in word.
 
 Implements [ExactEntropy(Trigrams, int)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IEntropyCalculator.ExactEntropy(Xecrets.Words.Model.Trigrams,int) 'Xecrets.Words.Abstractions.IEntropyCalculator.ExactEntropy(Xecrets.Words.Model.Trigrams, int)')
 
 #### Returns
-[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')  
+[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')  
 The entropy in bits of that length

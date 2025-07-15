@@ -9,7 +9,7 @@ Serialize and deserialize trigrams.
 public class Serialization : Xecrets.Words.Abstractions.ISerialization
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Serialization
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Serialization
 
 Implements [ISerialization](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ISerialization 'Xecrets.Words.Abstractions.ISerialization')
 ### Methods
@@ -35,7 +35,7 @@ The type to deserialize to.
 
 <a name='Xecrets.Words.Implementation.Serialization.Deserialize_T_(string).json'></a>
 
-`json` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`json` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 A string with JSON to deserialize.
 
@@ -65,5 +65,5 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 Implements [Serialize(Trigrams)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ISerialization.Serialize(Xecrets.Words.Model.Trigrams) 'Xecrets.Words.Abstractions.ISerialization.Serialize(Xecrets.Words.Model.Trigrams)')
 
 #### Returns
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')  
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')  
 A string with JSON.

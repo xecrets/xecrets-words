@@ -9,7 +9,7 @@ Trigrams extracted from text by an analyzer.
 public class Trigrams
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Trigrams
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Trigrams
 ### Properties
 
 <a name='Xecrets.Words.Model.Trigrams.Ending'></a>
@@ -23,7 +23,7 @@ public System.Collections.Generic.Dictionary<string,int> Ending { get; set; }
 ```
 
 #### Property Value
-[System.Collections.Generic.Dictionary&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')
+[System.Collections.Generic.Dictionary&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')[,](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')
 
 <a name='Xecrets.Words.Model.Trigrams.LengthEntropy'></a>
 
@@ -37,7 +37,7 @@ public System.Collections.Generic.Dictionary<int,double> LengthEntropy { get; se
 ```
 
 #### Property Value
-[System.Collections.Generic.Dictionary&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')
+[System.Collections.Generic.Dictionary&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')[,](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')
 
 <a name='Xecrets.Words.Model.Trigrams.Middle'></a>
 
@@ -50,7 +50,7 @@ public System.Collections.Generic.Dictionary<string,int> Middle { get; set; }
 ```
 
 #### Property Value
-[System.Collections.Generic.Dictionary&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')
+[System.Collections.Generic.Dictionary&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')[,](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')
 
 <a name='Xecrets.Words.Model.Trigrams.Starting'></a>
 
@@ -63,4 +63,4 @@ public System.Collections.Generic.Dictionary<string,int> Starting { get; set; }
 ```
 
 #### Property Value
-[System.Collections.Generic.Dictionary&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2 'System.Collections.Generic.Dictionary`2')
+[System.Collections.Generic.Dictionary&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')[,](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 'System.Collections.Generic.Dictionary`2')

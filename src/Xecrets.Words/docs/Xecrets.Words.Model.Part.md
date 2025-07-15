@@ -9,9 +9,9 @@ A part of a password.
 public record Part : System.IEquatable<Xecrets.Words.Model.Part>
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Part
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Part
 
-Implements [System.IEquatable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.IEquatable-1 'System.IEquatable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IEquatable-1 'System.IEquatable`1')
+Implements [System.IEquatable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.iequatable-1 'System.IEquatable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.iequatable-1 'System.IEquatable`1')
 ### Constructors
 
 <a name='Xecrets.Words.Model.Part.Part(Xecrets.Words.Model.Op,int,int,Xecrets.Words.Model.Casing)'></a>
@@ -33,13 +33,13 @@ The [operation](Xecrets.Words.Model.Part.md#Xecrets.Words.Model.Part.Op 'Xecrets
 
 <a name='Xecrets.Words.Model.Part.Part(Xecrets.Words.Model.Op,int,int,Xecrets.Words.Model.Casing).Min'></a>
 
-`Min` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`Min` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 The minimum number of characters.
 
 <a name='Xecrets.Words.Model.Part.Part(Xecrets.Words.Model.Op,int,int,Xecrets.Words.Model.Casing).Max'></a>
 
-`Max` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`Max` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 The maximum number of characters.
 
@@ -74,7 +74,7 @@ public int Max { get; init; }
 ```
 
 #### Property Value
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 <a name='Xecrets.Words.Model.Part.Min'></a>
 
@@ -87,7 +87,7 @@ public int Min { get; init; }
 ```
 
 #### Property Value
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 <a name='Xecrets.Words.Model.Part.Op'></a>
 

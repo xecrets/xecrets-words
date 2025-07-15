@@ -9,7 +9,7 @@ Extension methods to configure Xecrets Words services.
 public static class Configure
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Configure
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Configure
 ### Methods
 
 <a name='Xecrets.Words.Configure.ConfigureWords(thisMicrosoft.Extensions.DependencyInjection.IServiceCollection)'></a>
@@ -25,7 +25,7 @@ public static void ConfigureWords(this Microsoft.Extensions.DependencyInjection.
 
 <a name='Xecrets.Words.Configure.ConfigureWords(thisMicrosoft.Extensions.DependencyInjection.IServiceCollection).services'></a>
 
-`services` [Microsoft.Extensions.DependencyInjection.IServiceCollection](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Extensions.DependencyInjection.IServiceCollection 'Microsoft.Extensions.DependencyInjection.IServiceCollection')
+`services` [Microsoft.Extensions.DependencyInjection.IServiceCollection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection 'Microsoft.Extensions.DependencyInjection.IServiceCollection')
 
-The [Microsoft.Extensions.DependencyInjection.IServiceCollection](https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Extensions.DependencyInjection.IServiceCollection 'Microsoft.Extensions.DependencyInjection.IServiceCollection') to add the
+The [Microsoft.Extensions.DependencyInjection.IServiceCollection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection 'Microsoft.Extensions.DependencyInjection.IServiceCollection') to add the
             services to.

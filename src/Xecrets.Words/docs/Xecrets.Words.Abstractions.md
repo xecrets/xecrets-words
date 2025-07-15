@@ -52,13 +52,13 @@ An [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 
 
 <a name='Xecrets.Words.Abstractions.IAnalyzer.AddAsync(Xecrets.Words.Abstractions.ICulture,System.IO.TextReader).reader'></a>
 
-`reader` [System.IO.TextReader](https://docs.microsoft.com/en-us/dotnet/api/System.IO.TextReader 'System.IO.TextReader')
+`reader` [System.IO.TextReader](https://learn.microsoft.com/en-us/dotnet/api/system.io.textreader 'System.IO.TextReader')
 
-A [System.IO.TextReader](https://docs.microsoft.com/en-us/dotnet/api/System.IO.TextReader 'System.IO.TextReader') to analyze.
+A [System.IO.TextReader](https://learn.microsoft.com/en-us/dotnet/api/system.io.textreader 'System.IO.TextReader') to analyze.
 
 #### Returns
-[System.Threading.Tasks.Task](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task 'System.Threading.Tasks.Task')  
-A waitable [System.Threading.Tasks.Task](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task 'System.Threading.Tasks.Task').
+[System.Threading.Tasks.Task](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task 'System.Threading.Tasks.Task')  
+A waitable [System.Threading.Tasks.Task](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task 'System.Threading.Tasks.Task').
 
 <a name='Xecrets.Words.Abstractions.IAnalyzer.Trigrams(bool)'></a>
 
@@ -73,7 +73,7 @@ Xecrets.Words.Model.Trigrams Trigrams(bool asciiOnly);
 
 <a name='Xecrets.Words.Abstractions.IAnalyzer.Trigrams(bool).asciiOnly'></a>
 
-`asciiOnly` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+`asciiOnly` [System.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System.Boolean')
 
 Set to true if only A-Z ASCII should be
             included.
@@ -109,7 +109,7 @@ Xecrets.Words.Abstractions.IBuilder Add(Xecrets.Words.Model.Part[] parts, Xecret
 
 <a name='Xecrets.Words.Abstractions.IBuilder.Add(Xecrets.Words.Model.Part[],Xecrets.Words.Model.Strategy).parts'></a>
 
-`parts` [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`parts` [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[[]](https://learn.microsoft.com/en-us/dotnet/api/system.array 'System.Array')
 
 <a name='Xecrets.Words.Abstractions.IBuilder.Add(Xecrets.Words.Model.Part[],Xecrets.Words.Model.Strategy).strategy'></a>
 
@@ -139,7 +139,7 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') for req
             determine what constitutes special characters.
 
 #### Returns
-[System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')  
+[System.Collections.Generic.IEnumerable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')  
 A sequence of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s that can be used to actually
             generate the password.
 
@@ -196,7 +196,7 @@ bool AsciiOnly { get; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System.Boolean')
 
 <a name='Xecrets.Words.Abstractions.ICulture.CultureInfo'></a>
 
@@ -209,7 +209,7 @@ System.Globalization.CultureInfo CultureInfo { get; }
 ```
 
 #### Property Value
-[System.Globalization.CultureInfo](https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CultureInfo 'System.Globalization.CultureInfo')
+[System.Globalization.CultureInfo](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo 'System.Globalization.CultureInfo')
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator'></a>
 
@@ -244,7 +244,7 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,string,Xecrets.Words.Model.Policy).password'></a>
 
-`password` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`password` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 The password to calculate.
 
@@ -255,7 +255,7 @@ The password to calculate.
 The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 
 #### Returns
-[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')  
+[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')  
 An estimated policy.
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy)'></a>
@@ -277,7 +277,7 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy).parts'></a>
 
-`parts` [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')
+`parts` [System.Collections.Generic.IEnumerable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')
 
 The [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s to use.
 
@@ -288,12 +288,12 @@ The [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s to use.
 The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 
 #### Returns
-[&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple 'System.ValueTuple')[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')[,](https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple 'System.ValueTuple')[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple 'System.ValueTuple')  
+[&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple 'System.ValueTuple')[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')[,](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple 'System.ValueTuple')[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple 'System.ValueTuple')  
 A (lo, hi) tuple of entropy estimates.
 
 #### Exceptions
 
-[System.ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/System.ArgumentException 'System.ArgumentException')
+[System.ArgumentException](https://learn.microsoft.com/en-us/dotnet/api/system.argumentexception 'System.ArgumentException')
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator.EstimateEntropy(Xecrets.Words.Model.Trigrams,int)'></a>
 
@@ -318,12 +318,12 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator.EstimateEntropy(Xecrets.Words.Model.Trigrams,int).length'></a>
 
-`length` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`length` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 The number of characters to calculate for
 
 #### Returns
-[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')  
+[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')  
 An estimated entropy in bits
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator.ExactEntropy(Xecrets.Words.Model.Trigrams,int)'></a>
@@ -345,12 +345,12 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator.ExactEntropy(Xecrets.Words.Model.Trigrams,int).length'></a>
 
-`length` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`length` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 Number of characters in word.
 
 #### Returns
-[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')  
+[System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System.Double')  
 The entropy in bits of that length
 
 <a name='Xecrets.Words.Abstractions.IGenerator'></a>
@@ -386,7 +386,7 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Abstractions.IGenerator.Generate(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy).parts'></a>
 
-`parts` [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')
+`parts` [System.Collections.Generic.IEnumerable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')
 
 The [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s to use.
 
@@ -397,7 +397,7 @@ The [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s to use.
 The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 
 #### Returns
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 <a name='Xecrets.Words.Abstractions.IGenerator.Word(Xecrets.Words.Model.Trigrams,int)'></a>
 
@@ -420,20 +420,20 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Abstractions.IGenerator.Word(Xecrets.Words.Model.Trigrams,int).length'></a>
 
-`length` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`length` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 The length of the word to generate
 
 #### Returns
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')  
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')  
 A word of the given length
 
 #### Exceptions
 
-[System.ArgumentOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/System.ArgumentOutOfRangeException 'System.ArgumentOutOfRangeException')  
+[System.ArgumentOutOfRangeException](https://learn.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception 'System.ArgumentOutOfRangeException')  
 The length must be at least 3.
 
-[System.InvalidOperationException](https://docs.microsoft.com/en-us/dotnet/api/System.InvalidOperationException 'System.InvalidOperationException')  
+[System.InvalidOperationException](https://learn.microsoft.com/en-us/dotnet/api/system.invalidoperationexception 'System.InvalidOperationException')  
 No word was possible to generate of that length.
 
 ### Remarks
@@ -466,24 +466,24 @@ int Random(int min, int max, string id);
 
 <a name='Xecrets.Words.Abstractions.IRandom.Random(int,int,string).min'></a>
 
-`min` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`min` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 The lowest value returned
 
 <a name='Xecrets.Words.Abstractions.IRandom.Random(int,int,string).max'></a>
 
-`max` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`max` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 The value returned is less than this
 
 <a name='Xecrets.Words.Abstractions.IRandom.Random(int,int,string).id'></a>
 
-`id` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`id` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 An arbitrary identifier, primarily used for unit testing, diagnostics and debugging.
 
 #### Returns
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
+[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')  
 A value, such that min LE value GT max, except for special cases:
 min == max returns min - 1
 min > max return max
@@ -523,7 +523,7 @@ The type to deserialize to.
 
 <a name='Xecrets.Words.Abstractions.ISerialization.Deserialize_T_(string).json'></a>
 
-`json` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`json` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 A string with JSON to deserialize.
 
@@ -549,7 +549,7 @@ string Serialize(Xecrets.Words.Model.Trigrams trigrams);
 The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') to serialize.
 
 #### Returns
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')  
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')  
 A string with JSON.
 
 <a name='Xecrets.Words.Abstractions.IValidation'></a>
@@ -582,7 +582,7 @@ int Entropy(string password, Xecrets.Words.Model.Policy policy);
 
 <a name='Xecrets.Words.Abstractions.IValidation.Entropy(string,Xecrets.Words.Model.Policy).password'></a>
 
-`password` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`password` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 The string to calculate the entropy of.
 
@@ -593,7 +593,7 @@ The string to calculate the entropy of.
 The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 
 #### Returns
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
+[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')  
 An upper bound estimate of the entropy in bits.
 
 ### Remarks
@@ -625,7 +625,7 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Abstractions.IValidation.Validate(Xecrets.Words.Model.Trigrams,string,Xecrets.Words.Model.Policy).password'></a>
 
-`password` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`password` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 The password to validate against the policy.
 
@@ -636,5 +636,5 @@ The password to validate against the policy.
 The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 
 #### Returns
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')  
+[System.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System.Boolean')  
 True if the password conforms to the policy, false otherwise.

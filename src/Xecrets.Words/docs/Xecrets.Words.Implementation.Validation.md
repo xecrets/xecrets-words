@@ -9,7 +9,7 @@ Validate a password against a policy and calculate the entropy of a password.
 public class Validation : Xecrets.Words.Abstractions.IValidation
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Validation
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Validation
 
 Implements [IValidation](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IValidation 'Xecrets.Words.Abstractions.IValidation')
 ### Methods
@@ -30,7 +30,7 @@ public int Entropy(string password, Xecrets.Words.Model.Policy policy);
 
 <a name='Xecrets.Words.Implementation.Validation.Entropy(string,Xecrets.Words.Model.Policy).password'></a>
 
-`password` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`password` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 The string to calculate the entropy of.
 
@@ -43,7 +43,7 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 Implements [Entropy(string, Policy)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IValidation.Entropy(string,Xecrets.Words.Model.Policy) 'Xecrets.Words.Abstractions.IValidation.Entropy(string, Xecrets.Words.Model.Policy)')
 
 #### Returns
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
+[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')  
 An upper bound estimate of the entropy in bits.
 
 ### Remarks
@@ -75,7 +75,7 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Implementation.Validation.Validate(Xecrets.Words.Model.Trigrams,string,Xecrets.Words.Model.Policy).password'></a>
 
-`password` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`password` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 The password to validate against the policy.
 
@@ -88,5 +88,5 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 Implements [Validate(Trigrams, string, Policy)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IValidation.Validate(Xecrets.Words.Model.Trigrams,string,Xecrets.Words.Model.Policy) 'Xecrets.Words.Abstractions.IValidation.Validate(Xecrets.Words.Model.Trigrams, string, Xecrets.Words.Model.Policy)')
 
 #### Returns
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')  
+[System.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System.Boolean')  
 True if the password conforms to the policy, false otherwise.

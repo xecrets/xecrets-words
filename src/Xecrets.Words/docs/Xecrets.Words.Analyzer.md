@@ -9,7 +9,7 @@ Perform trigram analysis of text streams.
 public class Analyzer : Xecrets.Words.Abstractions.IAnalyzer
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Analyzer
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Analyzer
 
 Implements [IAnalyzer](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IAnalyzer 'Xecrets.Words.Abstractions.IAnalyzer')
 ### Properties
@@ -51,15 +51,15 @@ An [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 
 
 <a name='Xecrets.Words.Analyzer.AddAsync(Xecrets.Words.Abstractions.ICulture,System.IO.TextReader).reader'></a>
 
-`reader` [System.IO.TextReader](https://docs.microsoft.com/en-us/dotnet/api/System.IO.TextReader 'System.IO.TextReader')
+`reader` [System.IO.TextReader](https://learn.microsoft.com/en-us/dotnet/api/system.io.textreader 'System.IO.TextReader')
 
-A [System.IO.TextReader](https://docs.microsoft.com/en-us/dotnet/api/System.IO.TextReader 'System.IO.TextReader') to analyze.
+A [System.IO.TextReader](https://learn.microsoft.com/en-us/dotnet/api/system.io.textreader 'System.IO.TextReader') to analyze.
 
 Implements [AddAsync(ICulture, TextReader)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IAnalyzer.AddAsync(Xecrets.Words.Abstractions.ICulture,System.IO.TextReader) 'Xecrets.Words.Abstractions.IAnalyzer.AddAsync(Xecrets.Words.Abstractions.ICulture, System.IO.TextReader)')
 
 #### Returns
-[System.Threading.Tasks.Task](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task 'System.Threading.Tasks.Task')  
-A waitable [System.Threading.Tasks.Task](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task 'System.Threading.Tasks.Task').
+[System.Threading.Tasks.Task](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task 'System.Threading.Tasks.Task')  
+A waitable [System.Threading.Tasks.Task](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task 'System.Threading.Tasks.Task').
 
 <a name='Xecrets.Words.Analyzer.Trigrams(bool)'></a>
 
@@ -74,7 +74,7 @@ public Xecrets.Words.Model.Trigrams Trigrams(bool asciiOnly);
 
 <a name='Xecrets.Words.Analyzer.Trigrams(bool).asciiOnly'></a>
 
-`asciiOnly` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+`asciiOnly` [System.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System.Boolean')
 
 Set to true if only A-Z ASCII should be
             included.

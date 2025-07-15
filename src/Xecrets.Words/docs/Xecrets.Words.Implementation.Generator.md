@@ -9,7 +9,7 @@ Generate passwords.
 public class Generator : Xecrets.Words.Abstractions.IGenerator
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Generator
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Generator
 
 Implements [IGenerator](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IGenerator 'Xecrets.Words.Abstractions.IGenerator')
 ### Methods
@@ -33,7 +33,7 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Implementation.Generator.Generate(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy).parts'></a>
 
-`parts` [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')
+`parts` [System.Collections.Generic.IEnumerable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')[Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1 'System.Collections.Generic.IEnumerable`1')
 
 The [Part](Xecrets.Words.Model.Part.md 'Xecrets.Words.Model.Part')s to use.
 
@@ -46,7 +46,7 @@ The [Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy') to use.
 Implements [Generate(Trigrams, IEnumerable&lt;Part&gt;, Policy)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IGenerator.Generate(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy) 'Xecrets.Words.Abstractions.IGenerator.Generate(Xecrets.Words.Model.Trigrams, System.Collections.Generic.IEnumerable<Xecrets.Words.Model.Part>, Xecrets.Words.Model.Policy)')
 
 #### Returns
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
 
 <a name='Xecrets.Words.Implementation.Generator.Word(Xecrets.Words.Model.Trigrams,int)'></a>
 
@@ -69,22 +69,22 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 
 <a name='Xecrets.Words.Implementation.Generator.Word(Xecrets.Words.Model.Trigrams,int).length'></a>
 
-`length` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`length` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
 
 The length of the word to generate
 
 Implements [Word(Trigrams, int)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IGenerator.Word(Xecrets.Words.Model.Trigrams,int) 'Xecrets.Words.Abstractions.IGenerator.Word(Xecrets.Words.Model.Trigrams, int)')
 
 #### Returns
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')  
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')  
 A word of the given length
 
 #### Exceptions
 
-[System.ArgumentOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/System.ArgumentOutOfRangeException 'System.ArgumentOutOfRangeException')  
+[System.ArgumentOutOfRangeException](https://learn.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception 'System.ArgumentOutOfRangeException')  
 The length must be at least 3.
 
-[System.InvalidOperationException](https://docs.microsoft.com/en-us/dotnet/api/System.InvalidOperationException 'System.InvalidOperationException')  
+[System.InvalidOperationException](https://learn.microsoft.com/en-us/dotnet/api/system.invalidoperationexception 'System.InvalidOperationException')  
 No word was possible to generate of that length.
 
 ### Remarks
