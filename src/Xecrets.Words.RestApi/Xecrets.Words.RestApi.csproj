@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <NeutralLanguage>en-US</NeutralLanguage>
     <UserSecretsId>8eb6209e-00e7-454b-8211-fd506b03bc76</UserSecretsId>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>9999</WarningLevel>
