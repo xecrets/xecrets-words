@@ -26,6 +26,7 @@
     <RepositoryUrl>https://github.com/xecrets/xecrets-words</RepositoryUrl>
     <PackageIcon>icon_128x128.png</PackageIcon>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <IsAotCompatible>true</IsAotCompatible>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
