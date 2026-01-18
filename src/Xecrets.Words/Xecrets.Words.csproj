@@ -75,4 +75,10 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="..\global.json">
+      <Link>global.json</Link>
+    </Content>
+  </ItemGroup>
+
 </Project>
