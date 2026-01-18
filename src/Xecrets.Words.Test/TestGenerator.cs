@@ -1,7 +1,7 @@
 #region Coypright and GPL License
 
 /*
- * Xecrets Words - Copyright © 2024-2025 Svante Seleborg, All Rights Reserved.
+ * Xecrets Words - Copyright ï¿½ 2024-2025 Svante Seleborg, All Rights Reserved.
  *
  * This code file is part of Xecrets Words, a library and sample app to produce rememberable and pronounceable strong passwords.
  * 
@@ -32,6 +32,8 @@ using Xecrets.Words.Abstractions;
 using Xecrets.Words.Implementation;
 using Xecrets.Words.Model;
 
+[assembly: Parallelize(Scope = ExecutionScope.MethodLevel)]
+
 namespace Xecrets.Words.Test;
 
 [TestClass]
@@ -48,7 +50,8 @@ public class TestGenerator
     {
         _services.ConfigureWords();
 
-        _services.Replace(ServiceDescriptor.Singleton<IRandom, FakeRandom>());
+        _services.Remove(ServiceDescriptor.Singleton<IRandom, FakeRandom>());
+        _services.AddTransient<IRandom, FakeRandom>();
     }
 
     [TestInitialize]
@@ -61,7 +64,7 @@ public class TestGenerator
     public void TestTooShortLengthWord()
     {
         IGenerator generator = Container.GetRequiredService<IGenerator>();
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => generator.Word(new Trigrams(), 0));
+        Assert.Throws<ArgumentOutOfRangeException>(() => generator.Word(new Trigrams(), 0));
     }
 
     [TestMethod]
@@ -229,7 +232,7 @@ public class TestGenerator
 
         string word;
         word = generator.Generate(trigrams, builder.Build(policy), policy);
-        Assert.AreEqual("Oblanst", word, "Title cased word.");
+        Assert.AreEqual("Heyorce", word, "Title cased word.");
     }
 
     [TestMethod]
@@ -249,7 +252,7 @@ public class TestGenerator
 
         string word;
         word = generator.Generate(trigrams, builder.Build(policy), policy);
-        Assert.AreEqual("oBlAnSt", word, "Random cased word.");
+        Assert.AreEqual("HeYoRcE", word, "Random cased word.");
     }
 
     [TestMethod]
@@ -271,9 +274,9 @@ public class TestGenerator
         string word;
 
         word = generator.Generate(trigrams, builder.Build(policy), policy);
-        Assert.AreEqual("oblansLend", word, "Camel cased word.");
+        Assert.AreEqual("heYorcethe", word, "Camel cased word.");
         word = generator.Generate(trigrams, builder.Build(policy), policy);
-        Assert.AreEqual("tinenArced", word, "Camel cased word.");
+        Assert.AreEqual("issigMacly", word, "Camel cased word.");
     }
 
     [TestMethod]
@@ -301,10 +304,10 @@ public class TestGenerator
         Policy policy = Policy.Default with { Entropy = 48, Length = 15, };
         word = generator.Generate(trigrams, builder.Build(policy), policy);
 
-        Assert.AreEqual("&doUlgry25PoVonse", word, "Camel and Pascal cased words.");
+        Assert.AreEqual(".spyRag03PerLat", word, "Camel and Pascal cased words.");
 
         double entropy = entropyCalculator.Entropy(trigrams, word, policy);
-        const int expectedEntropy = 71;
+        const int expectedEntropy = 65;
         Assert.IsTrue(entropy is >= expectedEntropy and <= expectedEntropy + 1, $"Entropy was {entropy}, expected ~{expectedEntropy}.");
     }
 
@@ -316,15 +319,15 @@ public class TestGenerator
         int bits, expected;
         bits = validation.Entropy(".spyrim1TakAdom", policy);
         expected = 95;
-        Assert.IsTrue(bits == expected, $"Expected {expected} bits, got {bits}.");
+        Assert.AreEqual(expected, bits,$"Expected {expected} bits, got {bits}.");
 
         bits = validation.Entropy("MySecretPassword", policy);
         expected = 11;
-        Assert.IsTrue(bits == expected, $"Expected {expected} bits, got {bits}.");
+        Assert.AreEqual(expected, bits, $"Expected {expected} bits, got {bits}.");
 
         bits = validation.Entropy("MyPfdsfuQbttxpse", policy);
         expected = 91;
-        Assert.IsTrue(bits == expected, $"Expected {expected} bits, got {bits}.");
+        Assert.AreEqual(expected, bits, $"Expected {expected} bits, got {bits}.");
     }
 
     [TestMethod]
@@ -345,7 +348,7 @@ public class TestGenerator
         string word;
         word = generator.Generate(trigrams, builder.Build(policy), policy);
 
-        Assert.AreEqual("2", word, "A single digit.");
+        Assert.AreEqual("6", word, "A single digit.");
 
     }
 

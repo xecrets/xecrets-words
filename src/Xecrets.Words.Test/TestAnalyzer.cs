@@ -66,9 +66,9 @@ public class TestAnalyzer
         await analyzer.AddAsync(culture, new StringReader("word"));
 
         Trigrams trigrams = analyzer.Trigrams(asciiOnly: true);
-        Assert.AreEqual(1, trigrams.Starting.Count, "starting");
-        Assert.AreEqual(0, trigrams.Middle.Count, "middle");
-        Assert.AreEqual(1, trigrams.Ending.Count, "ending");
+        Assert.HasCount(1, trigrams.Starting, "starting");
+        Assert.IsEmpty(trigrams.Middle, "middle");
+        Assert.HasCount(1, trigrams.Ending, "ending");
     }
 
     [TestMethod]
@@ -80,9 +80,9 @@ public class TestAnalyzer
         await analyzer.AddAsync(culture, new StringReader("a one is word two"));
 
         Trigrams trigrams = analyzer.Trigrams(asciiOnly: true);
-        Assert.AreEqual(3, trigrams.Starting.Count, "starting");
-        Assert.AreEqual(0, trigrams.Middle.Count, "middle");
-        Assert.AreEqual(1, trigrams.Ending.Count, "ending");
+        Assert.HasCount(3, trigrams.Starting, "starting");
+        Assert.HasCount(0, trigrams.Middle, "middle");
+        Assert.HasCount(1, trigrams.Ending, "ending");
     }
 
     [TestMethod]
@@ -94,9 +94,9 @@ public class TestAnalyzer
         await analyzer.AddAsync(culture, new StringReader("The quick brown fox"));
 
         Trigrams trigrams = analyzer.Trigrams(asciiOnly: true);
-        Assert.AreEqual(4, trigrams.Starting.Count, "starting");
-        Assert.AreEqual(2, trigrams.Middle.Count, "middle");
-        Assert.AreEqual(2, trigrams.Ending.Count, "ending");
+        Assert.HasCount(4, trigrams.Starting, "starting");
+        Assert.HasCount(2, trigrams.Middle, "middle");
+        Assert.HasCount(2, trigrams.Ending, "ending");
     }
 
     [TestMethod]
@@ -108,9 +108,9 @@ public class TestAnalyzer
         await analyzer.AddAsync(culture, new StringReader("The quick brown fox is a brown fox"));
 
         Trigrams trigrams = analyzer.Trigrams(asciiOnly: true);
-        Assert.AreEqual(4, trigrams.Starting.Count, "starting");
-        Assert.AreEqual(2, trigrams.Middle.Count, "middle");
-        Assert.AreEqual(2, trigrams.Ending.Count, "ending");
+        Assert.HasCount(4, trigrams.Starting, "starting");
+        Assert.HasCount(2, trigrams.Middle, "middle");
+        Assert.HasCount(2, trigrams.Ending, "ending");
     }
 
     [TestMethod]
