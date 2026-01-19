@@ -1,7 +1,7 @@
 #region Coypright and GPL License
 
 /*
- * Xecrets Words - Copyright © 2024-2025 Svante Seleborg, All Rights Reserved.
+ * Xecrets Words - Copyright Â© 2024-2025 Svante Seleborg, All Rights Reserved.
  *
  * This code file is part of Xecrets Words, a library and sample app to produce rememberable and pronounceable strong passwords.
  * 
