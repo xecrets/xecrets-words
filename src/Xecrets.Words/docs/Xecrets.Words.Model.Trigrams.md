@@ -9,7 +9,7 @@ Trigrams extracted from text by an analyzer.
 public class Trigrams
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Trigrams
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Trigrams
 ### Properties
 
 <a name='Xecrets.Words.Model.Trigrams.Ending'></a>

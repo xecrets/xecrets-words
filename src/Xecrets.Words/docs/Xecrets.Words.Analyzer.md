@@ -9,7 +9,7 @@ Perform trigram analysis of text streams.
 public class Analyzer : Xecrets.Words.Abstractions.IAnalyzer
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Analyzer
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Analyzer
 
 Implements [IAnalyzer](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IAnalyzer 'Xecrets.Words.Abstractions.IAnalyzer')
 ### Properties

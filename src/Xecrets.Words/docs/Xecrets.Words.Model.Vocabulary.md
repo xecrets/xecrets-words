@@ -10,7 +10,7 @@ occurrence statistics in a dictionary.
 public class Vocabulary
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Vocabulary
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Vocabulary
 ### Fields
 
 <a name='Xecrets.Words.Model.Vocabulary.Words'></a>

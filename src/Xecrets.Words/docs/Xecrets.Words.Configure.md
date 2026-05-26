@@ -9,7 +9,7 @@ Extension methods to configure Xecrets Words services.
 public static class Configure
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Configure
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Configure
 ### Methods
 
 <a name='Xecrets.Words.Configure.ConfigureWords(thisMicrosoft.Extensions.DependencyInjection.IServiceCollection)'></a>

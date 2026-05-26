@@ -9,7 +9,7 @@ A random number generator
 public class StrongRandom : Xecrets.Words.Abstractions.IRandom
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; StrongRandom
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → StrongRandom
 
 Implements [IRandom](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IRandom 'Xecrets.Words.Abstractions.IRandom')
 ### Methods

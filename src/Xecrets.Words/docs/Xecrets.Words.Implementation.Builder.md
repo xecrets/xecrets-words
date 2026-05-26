@@ -9,7 +9,7 @@ Builds a password from a set of [Part](Xecrets.Words.Model.Part.md 'Xecrets.Word
 public class Builder : Xecrets.Words.Abstractions.IBuilder
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Builder
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Builder
 
 Implements [IBuilder](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IBuilder 'Xecrets.Words.Abstractions.IBuilder')
 ### Methods

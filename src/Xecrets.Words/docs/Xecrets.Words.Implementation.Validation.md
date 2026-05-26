@@ -9,7 +9,7 @@ Validate a password against a policy and calculate the entropy of a password.
 public class Validation : Xecrets.Words.Abstractions.IValidation
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Validation
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Validation
 
 Implements [IValidation](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IValidation 'Xecrets.Words.Abstractions.IValidation')
 ### Methods

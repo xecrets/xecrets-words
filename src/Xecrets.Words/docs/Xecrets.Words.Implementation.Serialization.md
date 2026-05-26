@@ -9,7 +9,7 @@ Serialize and deserialize trigrams.
 public class Serialization : Xecrets.Words.Abstractions.ISerialization
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Serialization
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Serialization
 
 Implements [ISerialization](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ISerialization 'Xecrets.Words.Abstractions.ISerialization')
 ### Methods

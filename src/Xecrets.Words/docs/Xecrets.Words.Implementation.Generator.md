@@ -9,7 +9,7 @@ Generate passwords.
 public class Generator : Xecrets.Words.Abstractions.IGenerator
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Generator
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Generator
 
 Implements [IGenerator](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IGenerator 'Xecrets.Words.Abstractions.IGenerator')
 ### Methods

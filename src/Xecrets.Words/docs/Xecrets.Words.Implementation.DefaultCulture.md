@@ -10,7 +10,7 @@ A default implementation of [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Wor
 public class DefaultCulture : Xecrets.Words.Abstractions.ICulture
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; DefaultCulture
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → DefaultCulture
 
 Implements [ICulture](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.ICulture 'Xecrets.Words.Abstractions.ICulture')
 ### Properties

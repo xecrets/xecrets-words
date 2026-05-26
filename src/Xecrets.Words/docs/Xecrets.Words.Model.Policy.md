@@ -9,7 +9,7 @@ A password policy.
 public record Policy : System.IEquatable<Xecrets.Words.Model.Policy>
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; Policy
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → Policy
 
 Implements [System.IEquatable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.iequatable-1 'System.IEquatable`1')[Policy](Xecrets.Words.Model.Policy.md 'Xecrets.Words.Model.Policy')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.iequatable-1 'System.IEquatable`1')
 ### Constructors

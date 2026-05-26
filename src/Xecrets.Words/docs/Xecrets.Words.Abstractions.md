@@ -14,7 +14,7 @@ public interface IAnalyzer
 ```
 
 Derived  
-&#8627; [Analyzer](Xecrets.Words.Analyzer.md 'Xecrets.Words.Analyzer')
+↳ [Analyzer](Xecrets.Words.Analyzer.md 'Xecrets.Words.Analyzer')
 ### Properties
 
 <a name='Xecrets.Words.Abstractions.IAnalyzer.Vocabulary'></a>
@@ -93,7 +93,7 @@ public interface IBuilder
 ```
 
 Derived  
-&#8627; [Builder](Xecrets.Words.Implementation.Builder.md 'Xecrets.Words.Implementation.Builder')
+↳ [Builder](Xecrets.Words.Implementation.Builder.md 'Xecrets.Words.Implementation.Builder')
 ### Methods
 
 <a name='Xecrets.Words.Abstractions.IBuilder.Add(Xecrets.Words.Model.Part[],Xecrets.Words.Model.Strategy)'></a>
@@ -154,7 +154,7 @@ public interface IBuilderFactory
 ```
 
 Derived  
-&#8627; [BuilderFactory](Xecrets.Words.Implementation.BuilderFactory.md 'Xecrets.Words.Implementation.BuilderFactory')
+↳ [BuilderFactory](Xecrets.Words.Implementation.BuilderFactory.md 'Xecrets.Words.Implementation.BuilderFactory')
 ### Methods
 
 <a name='Xecrets.Words.Abstractions.IBuilderFactory.Create()'></a>
@@ -182,7 +182,7 @@ public interface ICulture
 ```
 
 Derived  
-&#8627; [DefaultCulture](Xecrets.Words.Implementation.DefaultCulture.md 'Xecrets.Words.Implementation.DefaultCulture')
+↳ [DefaultCulture](Xecrets.Words.Implementation.DefaultCulture.md 'Xecrets.Words.Implementation.DefaultCulture')
 ### Properties
 
 <a name='Xecrets.Words.Abstractions.ICulture.AsciiOnly'></a>
@@ -222,7 +222,7 @@ public interface IEntropyCalculator
 ```
 
 Derived  
-&#8627; [EntropyCalculator](Xecrets.Words.Implementation.EntropyCalculator.md 'Xecrets.Words.Implementation.EntropyCalculator')
+↳ [EntropyCalculator](Xecrets.Words.Implementation.EntropyCalculator.md 'Xecrets.Words.Implementation.EntropyCalculator')
 ### Methods
 
 <a name='Xecrets.Words.Abstractions.IEntropyCalculator.Entropy(Xecrets.Words.Model.Trigrams,string,Xecrets.Words.Model.Policy)'></a>
@@ -364,7 +364,7 @@ public interface IGenerator
 ```
 
 Derived  
-&#8627; [Generator](Xecrets.Words.Implementation.Generator.md 'Xecrets.Words.Implementation.Generator')
+↳ [Generator](Xecrets.Words.Implementation.Generator.md 'Xecrets.Words.Implementation.Generator')
 ### Methods
 
 <a name='Xecrets.Words.Abstractions.IGenerator.Generate(Xecrets.Words.Model.Trigrams,System.Collections.Generic.IEnumerable_Xecrets.Words.Model.Part_,Xecrets.Words.Model.Policy)'></a>
@@ -450,7 +450,7 @@ public interface IRandom
 ```
 
 Derived  
-&#8627; [StrongRandom](Xecrets.Words.Implementation.StrongRandom.md 'Xecrets.Words.Implementation.StrongRandom')
+↳ [StrongRandom](Xecrets.Words.Implementation.StrongRandom.md 'Xecrets.Words.Implementation.StrongRandom')
 ### Methods
 
 <a name='Xecrets.Words.Abstractions.IRandom.Random(int,int,string)'></a>
@@ -499,7 +499,7 @@ public interface ISerialization
 ```
 
 Derived  
-&#8627; [Serialization](Xecrets.Words.Implementation.Serialization.md 'Xecrets.Words.Implementation.Serialization')
+↳ [Serialization](Xecrets.Words.Implementation.Serialization.md 'Xecrets.Words.Implementation.Serialization')
 ### Methods
 
 <a name='Xecrets.Words.Abstractions.ISerialization.Deserialize_T_(string)'></a>
@@ -563,7 +563,7 @@ public interface IValidation
 ```
 
 Derived  
-&#8627; [Validation](Xecrets.Words.Implementation.Validation.md 'Xecrets.Words.Implementation.Validation')
+↳ [Validation](Xecrets.Words.Implementation.Validation.md 'Xecrets.Words.Implementation.Validation')
 ### Methods
 
 <a name='Xecrets.Words.Abstractions.IValidation.Entropy(string,Xecrets.Words.Model.Policy)'></a>

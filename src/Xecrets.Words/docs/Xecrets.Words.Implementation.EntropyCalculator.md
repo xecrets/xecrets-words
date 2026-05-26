@@ -9,7 +9,7 @@ Various methods to calculate the entropy of a password.
 public class EntropyCalculator : Xecrets.Words.Abstractions.IEntropyCalculator
 ```
 
-Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') &#129106; EntropyCalculator
+Inheritance [System.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System.Object') → EntropyCalculator
 
 Implements [IEntropyCalculator](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IEntropyCalculator 'Xecrets.Words.Abstractions.IEntropyCalculator')
 ### Methods
