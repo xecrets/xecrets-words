@@ -1,0 +1,17 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="../.gitignore" />
+    <File Path="../LICENSE" />
+    <File Path="../README.md" />
+    <File Path="../SECURITY.md" />
+  </Folder>
+  <Project Path="Xecrets.Words.Cmd/Xecrets.Words.Cmd.csproj" />
+  <Project Path="Xecrets.Words.RestApi/Xecrets.Words.RestApi.csproj" />
+  <Project Path="Xecrets.Words.Test/Xecrets.Words.Test.csproj" />
+  <Project Path="Xecrets.Words/Xecrets.Words.csproj" />
+</Solution>
