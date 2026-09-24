@@ -21,36 +21,49 @@
 
 #endregion Copyright and GPL License
 
-using Microsoft.Extensions.DependencyInjection;
-
 using Xecrets.Words.Abstractions;
-using Xecrets.Words.Implementation;
+using Xecrets.Words.Model;
 
-namespace Xecrets.Words;
+namespace Xecrets.Words.Implementation;
 
-/// <summary>
-/// Extension methods to configure Xecrets Words services.
-/// </summary>
-public static class Configure
+/// <inheritdoc/>
+public class StrengthMeter(IValidation validation) : IStrengthMeter
 {
-    /// <summary>
-    /// Configure default services for Xecrets Words
-    /// </summary>
-    /// <param name="services">The <see cref="IServiceCollection"/> to add the
-    /// services to.</param>
-    public static void ConfigureWords(this IServiceCollection services)
+    /// <inheritdoc/>
+    public int StrengthPercent(string password)
     {
-        services.AddSingleton<IRandom, StrongRandom>();
-        services.AddSingleton<ICulture, DefaultCulture>();
-        services.AddSingleton<IValidation, Validation>();
-        services.AddSingleton<ISerialization, Serialization>();
-        services.AddSingleton<IGenerator, Generator>();
-        services.AddSingleton<IEntropyCalculator, EntropyCalculator>();
-        services.AddSingleton<IBuilderFactory, BuilderFactory>();
-        services.AddSingleton<IPasswordSuggestions, PasswordSuggestions>();
-        services.AddSingleton<IStrengthMeter, StrengthMeter>();
+        int strength = (int)((validation.Entropy(password, Policy.Default) / 128.0) * 100.0);
+        if (password.Length > 0 && strength == 0)
+        {
+            strength = 1;
+        }
 
-        services.AddTransient<IAnalyzer, Analyzer>();
-        services.AddTransient<IBuilder, Builder>();
+        return strength;
+    }
+
+    /// <inheritdoc/>
+    public StrengthColor ToStrengthColor(int strength)
+    {
+        if (strength < 20)
+        {
+            return StrengthColor.Red;
+        }
+
+        if (strength < 40)
+        {
+            return StrengthColor.Orange;
+        }
+
+        if (strength < 60)
+        {
+            return StrengthColor.Yellow;
+        }
+
+        if (strength < 80)
+        {
+            return StrengthColor.LightGreen;
+        }
+
+        return StrengthColor.Green;
     }
 }

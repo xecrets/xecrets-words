@@ -14,3 +14,4 @@
 | [Casing](Xecrets.Words.Model.Casing.md 'Xecrets.Words.Model.Casing') | An enumeration of different casing tactics. |
 | [Op](Xecrets.Words.Model.Op.md 'Xecrets.Words.Model.Op') | An enumeration of typical password part operations. |
 | [Strategy](Xecrets.Words.Model.Strategy.md 'Xecrets.Words.Model.Strategy') | A set of strategies of how to select from a set of parts. |
+| [StrengthColor](Xecrets.Words.Model.StrengthColor.md 'Xecrets.Words.Model.StrengthColor') | A color indicating password strength, from weakest to strongest. |

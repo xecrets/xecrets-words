@@ -618,6 +618,62 @@ The [Trigrams](Xecrets.Words.Model.Trigrams.md 'Xecrets.Words.Model.Trigrams') t
 [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')  
 A string with JSON.
 
+<a name='Xecrets.Words.Abstractions.IStrengthMeter'></a>
+
+## IStrengthMeter Interface
+
+Estimate the strength of a password and map it to a color suitable for a strength indicator.
+
+```csharp
+public interface IStrengthMeter
+```
+
+Derived  
+↳ [StrengthMeter](Xecrets.Words.Implementation.StrengthMeter.md 'Xecrets.Words.Implementation.StrengthMeter')
+### Methods
+
+<a name='Xecrets.Words.Abstractions.IStrengthMeter.StrengthPercent(string)'></a>
+
+## IStrengthMeter.StrengthPercent(string) Method
+
+Estimate the strength of a password as a percentage, where 128 bits of entropy is 100%.
+
+```csharp
+int StrengthPercent(string password);
+```
+#### Parameters
+
+<a name='Xecrets.Words.Abstractions.IStrengthMeter.StrengthPercent(string).password'></a>
+
+`password` [System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')
+
+The password to estimate the strength of.
+
+#### Returns
+[System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')  
+The estimated strength in percent. A non-empty password is always at least 1.
+
+<a name='Xecrets.Words.Abstractions.IStrengthMeter.ToStrengthColor(int)'></a>
+
+## IStrengthMeter.ToStrengthColor(int) Method
+
+Map a strength percentage, as returned by [StrengthPercent(string)](Xecrets.Words.Abstractions.md#Xecrets.Words.Abstractions.IStrengthMeter.StrengthPercent(string) 'Xecrets.Words.Abstractions.IStrengthMeter.StrengthPercent(string)'), to a color.
+
+```csharp
+Xecrets.Words.Model.StrengthColor ToStrengthColor(int strength);
+```
+#### Parameters
+
+<a name='Xecrets.Words.Abstractions.IStrengthMeter.ToStrengthColor(int).strength'></a>
+
+`strength` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
+
+The strength in percent.
+
+#### Returns
+[StrengthColor](Xecrets.Words.Model.StrengthColor.md 'Xecrets.Words.Model.StrengthColor')  
+The [StrengthColor](Xecrets.Words.Model.StrengthColor.md 'Xecrets.Words.Model.StrengthColor') for the strength.
+
 <a name='Xecrets.Words.Abstractions.IValidation'></a>
 
 ## IValidation Interface

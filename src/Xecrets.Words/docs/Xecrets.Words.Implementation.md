@@ -11,5 +11,6 @@
 | [Generator](Xecrets.Words.Implementation.Generator.md 'Xecrets.Words.Implementation.Generator') | Generate passwords. |
 | [PasswordSuggestions](Xecrets.Words.Implementation.PasswordSuggestions.md 'Xecrets.Words.Implementation.PasswordSuggestions') | Suggest passwords and words using default settings and trigrams matching [System.Globalization.CultureInfo.CurrentUICulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentuiculture 'System.Globalization.CultureInfo.CurrentUICulture'), falling back to English when no trigrams for that culture are available. |
 | [Serialization](Xecrets.Words.Implementation.Serialization.md 'Xecrets.Words.Implementation.Serialization') | Serialize and deserialize trigrams. |
+| [StrengthMeter](Xecrets.Words.Implementation.StrengthMeter.md 'Xecrets.Words.Implementation.StrengthMeter') | Estimate the strength of a password and map it to a color suitable for a strength indicator. |
 | [StrongRandom](Xecrets.Words.Implementation.StrongRandom.md 'Xecrets.Words.Implementation.StrongRandom') | A random number generator |
 | [Validation](Xecrets.Words.Implementation.Validation.md 'Xecrets.Words.Implementation.Validation') | Validate a password against a policy and calculate the entropy of a password. |

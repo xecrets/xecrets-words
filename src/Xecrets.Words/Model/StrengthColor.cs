@@ -21,36 +21,35 @@
 
 #endregion Copyright and GPL License
 
-using Microsoft.Extensions.DependencyInjection;
-
-using Xecrets.Words.Abstractions;
-using Xecrets.Words.Implementation;
-
-namespace Xecrets.Words;
+namespace Xecrets.Words.Model;
 
 /// <summary>
-/// Extension methods to configure Xecrets Words services.
+/// A color indicating password strength, from weakest to strongest.
 /// </summary>
-public static class Configure
+public enum StrengthColor
 {
     /// <summary>
-    /// Configure default services for Xecrets Words
+    /// Very weak.
     /// </summary>
-    /// <param name="services">The <see cref="IServiceCollection"/> to add the
-    /// services to.</param>
-    public static void ConfigureWords(this IServiceCollection services)
-    {
-        services.AddSingleton<IRandom, StrongRandom>();
-        services.AddSingleton<ICulture, DefaultCulture>();
-        services.AddSingleton<IValidation, Validation>();
-        services.AddSingleton<ISerialization, Serialization>();
-        services.AddSingleton<IGenerator, Generator>();
-        services.AddSingleton<IEntropyCalculator, EntropyCalculator>();
-        services.AddSingleton<IBuilderFactory, BuilderFactory>();
-        services.AddSingleton<IPasswordSuggestions, PasswordSuggestions>();
-        services.AddSingleton<IStrengthMeter, StrengthMeter>();
+    Red,
 
-        services.AddTransient<IAnalyzer, Analyzer>();
-        services.AddTransient<IBuilder, Builder>();
-    }
+    /// <summary>
+    /// Weak.
+    /// </summary>
+    Orange,
+
+    /// <summary>
+    /// Moderate.
+    /// </summary>
+    Yellow,
+
+    /// <summary>
+    /// Strong.
+    /// </summary>
+    LightGreen,
+
+    /// <summary>
+    /// Very strong.
+    /// </summary>
+    Green,
 }

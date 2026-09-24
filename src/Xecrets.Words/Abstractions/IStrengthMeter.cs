@@ -21,36 +21,26 @@
 
 #endregion Copyright and GPL License
 
-using Microsoft.Extensions.DependencyInjection;
+using Xecrets.Words.Model;
 
-using Xecrets.Words.Abstractions;
-using Xecrets.Words.Implementation;
-
-namespace Xecrets.Words;
+namespace Xecrets.Words.Abstractions;
 
 /// <summary>
-/// Extension methods to configure Xecrets Words services.
+/// Estimate the strength of a password and map it to a color suitable for a strength indicator.
 /// </summary>
-public static class Configure
+public interface IStrengthMeter
 {
     /// <summary>
-    /// Configure default services for Xecrets Words
+    /// Estimate the strength of a password as a percentage, where 128 bits of entropy is 100%.
     /// </summary>
-    /// <param name="services">The <see cref="IServiceCollection"/> to add the
-    /// services to.</param>
-    public static void ConfigureWords(this IServiceCollection services)
-    {
-        services.AddSingleton<IRandom, StrongRandom>();
-        services.AddSingleton<ICulture, DefaultCulture>();
-        services.AddSingleton<IValidation, Validation>();
-        services.AddSingleton<ISerialization, Serialization>();
-        services.AddSingleton<IGenerator, Generator>();
-        services.AddSingleton<IEntropyCalculator, EntropyCalculator>();
-        services.AddSingleton<IBuilderFactory, BuilderFactory>();
-        services.AddSingleton<IPasswordSuggestions, PasswordSuggestions>();
-        services.AddSingleton<IStrengthMeter, StrengthMeter>();
+    /// <param name="password">The password to estimate the strength of.</param>
+    /// <returns>The estimated strength in percent. A non-empty password is always at least 1.</returns>
+    int StrengthPercent(string password);
 
-        services.AddTransient<IAnalyzer, Analyzer>();
-        services.AddTransient<IBuilder, Builder>();
-    }
+    /// <summary>
+    /// Map a strength percentage, as returned by <see cref="StrengthPercent(string)"/>, to a color.
+    /// </summary>
+    /// <param name="strength">The strength in percent.</param>
+    /// <returns>The <see cref="StrengthColor"/> for the strength.</returns>
+    StrengthColor ToStrengthColor(int strength);
 }
