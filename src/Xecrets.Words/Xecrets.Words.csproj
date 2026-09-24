@@ -89,10 +89,12 @@
   <ItemGroup>
     <None Remove="Resources\common-passwords.txt" />
     <None Remove="Resources\icon_128x128.png" />
+    <None Remove="Resources\trigrams-en.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\common-passwords.txt" />
+    <EmbeddedResource Include="Resources\trigrams-en.json" />
   </ItemGroup>
 
   <ItemGroup>

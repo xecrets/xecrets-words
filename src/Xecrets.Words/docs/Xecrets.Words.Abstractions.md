@@ -439,6 +439,72 @@ No word was possible to generate of that length.
 ### Remarks
 Word generation is done in a recursive fashion with backtracking if a dead end is hit.
 
+<a name='Xecrets.Words.Abstractions.IPasswordSuggestions'></a>
+
+## IPasswordSuggestions Interface
+
+Suggest passwords and words using default settings and trigrams matching
+[System.Globalization.CultureInfo.CurrentUICulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentuiculture 'System.Globalization.CultureInfo.CurrentUICulture'), falling back
+to English when no trigrams for that culture are available.
+
+```csharp
+public interface IPasswordSuggestions
+```
+
+Derived  
+↳ [PasswordSuggestions](Xecrets.Words.Implementation.PasswordSuggestions.md 'Xecrets.Words.Implementation.PasswordSuggestions')
+### Methods
+
+<a name='Xecrets.Words.Abstractions.IPasswordSuggestions.SimplePassword()'></a>
+
+## IPasswordSuggestions.SimplePassword() Method
+
+Suggest a simple password, easy to remember and type, but with lower
+entropy.
+
+```csharp
+string SimplePassword();
+```
+
+#### Returns
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')  
+A simple password.
+
+<a name='Xecrets.Words.Abstractions.IPasswordSuggestions.StrongPassword()'></a>
+
+## IPasswordSuggestions.StrongPassword() Method
+
+Suggest a strong password with high entropy.
+
+```csharp
+string StrongPassword();
+```
+
+#### Returns
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')  
+A strong password.
+
+<a name='Xecrets.Words.Abstractions.IPasswordSuggestions.Word(int)'></a>
+
+## IPasswordSuggestions.Word(int) Method
+
+Suggest a pronounceable word with an upper case first letter.
+
+```csharp
+string Word(int length);
+```
+#### Parameters
+
+<a name='Xecrets.Words.Abstractions.IPasswordSuggestions.Word(int).length'></a>
+
+`length` [System.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System.Int32')
+
+The length of the word, at least 3.
+
+#### Returns
+[System.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System.String')  
+A word of the given length.
+
 <a name='Xecrets.Words.Abstractions.IRandom'></a>
 
 ## IRandom Interface

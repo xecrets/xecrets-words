@@ -21,35 +21,32 @@
 
 #endregion Copyright and GPL License
 
-using Microsoft.Extensions.DependencyInjection;
-
-using Xecrets.Words.Abstractions;
-using Xecrets.Words.Implementation;
-
-namespace Xecrets.Words;
+namespace Xecrets.Words.Abstractions;
 
 /// <summary>
-/// Extension methods to configure Xecrets Words services.
+/// Suggest passwords and words using default settings and trigrams matching
+/// <see cref="System.Globalization.CultureInfo.CurrentUICulture"/>, falling back
+/// to English when no trigrams for that culture are available.
 /// </summary>
-public static class Configure
+public interface IPasswordSuggestions
 {
     /// <summary>
-    /// Configure default services for Xecrets Words
+    /// Suggest a simple password, easy to remember and type, but with lower
+    /// entropy.
     /// </summary>
-    /// <param name="services">The <see cref="IServiceCollection"/> to add the
-    /// services to.</param>
-    public static void ConfigureWords(this IServiceCollection services)
-    {
-        services.AddSingleton<IRandom, StrongRandom>();
-        services.AddSingleton<ICulture, DefaultCulture>();
-        services.AddSingleton<IValidation, Validation>();
-        services.AddSingleton<ISerialization, Serialization>();
-        services.AddSingleton<IGenerator, Generator>();
-        services.AddSingleton<IEntropyCalculator, EntropyCalculator>();
-        services.AddSingleton<IBuilderFactory, BuilderFactory>();
-        services.AddSingleton<IPasswordSuggestions, PasswordSuggestions>();
+    /// <returns>A simple password.</returns>
+    string SimplePassword();
 
-        services.AddTransient<IAnalyzer, Analyzer>();
-        services.AddTransient<IBuilder, Builder>();
-    }
+    /// <summary>
+    /// Suggest a strong password with high entropy.
+    /// </summary>
+    /// <returns>A strong password.</returns>
+    string StrongPassword();
+
+    /// <summary>
+    /// Suggest a pronounceable word with an upper case first letter.
+    /// </summary>
+    /// <param name="length">The length of the word, at least 3.</param>
+    /// <returns>A word of the given length.</returns>
+    string Word(int length);
 }
